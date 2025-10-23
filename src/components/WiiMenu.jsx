@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import DotGrid from './DotGrid/DotGrid';
 import './WiiMenu.css';
 
-const WiiMenu = () => {
+const WiiMenu = ({ setIsTransitioning, setClickPosition }) => {
   const navigate = useNavigate();
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
@@ -29,9 +29,14 @@ const WiiMenu = () => {
     { name: 'berkan.dev', subtitle: null, path: null, className: 'empty' },
   ];
 
-  const handleChannelClick = (path) => {
+  const handleChannelClick = (path, event) => {
     if (path) {
-      navigate(path);
+      // Capture click position
+      setClickPosition({ x: event.clientX, y: event.clientY });
+      setIsTransitioning(true);
+      setTimeout(() => {
+        navigate(path);
+      }, 400); // Wait for circle to expand and cover screen
     }
   };
 
@@ -134,7 +139,7 @@ const WiiMenu = () => {
           <div
             key={index}
             className={`channel-card ${channel.className}`}
-            onClick={() => handleChannelClick(channel.path)}
+            onClick={(e) => handleChannelClick(channel.path, e)}
             onMouseEnter={() => handleEnter(index)}
             onMouseLeave={() => handleLeave(index)}
           >
