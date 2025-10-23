@@ -9,6 +9,7 @@ const WiiMenu = () => {
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
   const activeTweenRefs = useRef([]);
+  const channelsGridRef = useRef(null);
 
   const channels = [
     { name: 'projects', subtitle: 'NEW', path: '/projects', className: 'projects' },
@@ -69,6 +70,30 @@ const WiiMenu = () => {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  useEffect(() => {
+    const channelsGrid = channelsGridRef.current;
+    if (!channelsGrid) return;
+
+    const handleScroll = () => {
+      const scrollLeft = channelsGrid.scrollLeft;
+
+      // Right fade: moves with scroll to stay at right edge of visible area
+      const fadeOffset = -scrollLeft;
+
+      // Left fade: moves with scroll to stay at left edge of visible area
+      // When scrollLeft = 0, hide it (-200px off-screen)
+      // When scrolled, show it at the left edge of viewport
+      const leftFadeOffset = scrollLeft > 0 ? scrollLeft : -200;
+
+      // Update CSS custom properties for both fade positions
+      channelsGrid.style.setProperty('--fade-offset', `${fadeOffset}px`);
+      channelsGrid.style.setProperty('--left-fade-offset', `${leftFadeOffset}px`);
+    };
+
+    channelsGrid.addEventListener('scroll', handleScroll);
+    return () => channelsGrid.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleEnter = (i) => {
     const tl = tlRefs.current[i];
     if (!tl) return;
@@ -104,7 +129,7 @@ const WiiMenu = () => {
         resistance={750}
         returnDuration={1.5}
       />
-      <div className="channels-grid">
+      <div className="channels-grid" ref={channelsGridRef}>
         {channels.map((channel, index) => (
           <div
             key={index}
