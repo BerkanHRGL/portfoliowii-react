@@ -99,6 +99,53 @@ const WiiMenu = ({ setIsTransitioning, setClickPosition }) => {
     return () => channelsGrid.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Mouse drag to scroll
+  useEffect(() => {
+    const channelsGrid = channelsGridRef.current;
+    if (!channelsGrid) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const handleMouseDown = (e) => {
+      isDown = true;
+      channelsGrid.classList.add('dragging');
+      startX = e.pageX - channelsGrid.offsetLeft;
+      scrollLeft = channelsGrid.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      channelsGrid.classList.remove('dragging');
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      channelsGrid.classList.remove('dragging');
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - channelsGrid.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll speed multiplier
+      channelsGrid.scrollLeft = scrollLeft - walk;
+    };
+
+    channelsGrid.addEventListener('mousedown', handleMouseDown);
+    channelsGrid.addEventListener('mouseleave', handleMouseLeave);
+    channelsGrid.addEventListener('mouseup', handleMouseUp);
+    channelsGrid.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      channelsGrid.removeEventListener('mousedown', handleMouseDown);
+      channelsGrid.removeEventListener('mouseleave', handleMouseLeave);
+      channelsGrid.removeEventListener('mouseup', handleMouseUp);
+      channelsGrid.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   const handleEnter = (i) => {
     const tl = tlRefs.current[i];
     if (!tl) return;

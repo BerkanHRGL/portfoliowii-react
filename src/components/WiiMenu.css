@@ -30,6 +30,22 @@
   z-index: 10;
   --fade-offset: 0px;
   --left-fade-offset: -200px;
+  cursor: grab;
+}
+
+/* Hide scrollbar */
+.channels-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.channels-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.channels-grid.dragging {
+  cursor: grabbing;
+  user-select: none;
 }
 
 .channels-grid::after {
