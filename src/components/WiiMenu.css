@@ -16,12 +16,14 @@
   grid-template-columns: repeat(5, 275px);
   grid-template-rows: repeat(3, 1fr);
   gap: 25px;
-  width: 1350px;
+  width: fit-content;
+  max-width: 1350px;
   height: 550px;
   margin-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: auto;
   overflow-y: visible;
-  max-width: calc(100vw - 120px);
   position: relative;
   transition: all 0.8s ease;
   padding-top: 10px;
