@@ -1,0 +1,147 @@
+.reading-guide-view {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: #e8e8e8;
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.reading-guide-section {
+  padding: 2rem;
+}
+
+.reading-guide-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.reading-guide-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.portfolio-format {
+  flex: 1;
+}
+
+.semester-section {
+  padding: 1.5rem 2rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.semester-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #667eea;
+  margin: 0;
+}
+
+.portfolio-format h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.portfolio-format ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.portfolio-format li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.portfolio-format li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.learning-outcome {
+  padding: 2rem;
+}
+
+.learning-outcome.reflection {
+  padding: 2rem;
+}
+
+.learning-outcome h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.learning-outcome h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.learning-outcome p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin: 1rem 0;
+}
+
+.learning-outcome ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.learning-outcome li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0.75rem 0;
+}
+
+.evidence-link {
+  background: none;
+  border: none;
+  color: #667eea;
+  text-decoration: underline;
+  cursor: url('/cursor/link select.cur'), pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.evidence-link:hover {
+  color: #764ba2;
+}

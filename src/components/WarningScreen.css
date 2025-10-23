@@ -1,0 +1,89 @@
+/* Warning Screen Styles */
+.warning-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.warning-screen.active {
+  opacity: 1;
+  pointer-events: all;
+  cursor: url('/cursor/link select.cur'), pointer;
+}
+
+.warning-content {
+  max-width: 800px;
+  padding: 60px;
+  text-align: left;
+}
+
+.warning-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.warning-icon {
+  font-size: 32px;
+  color: #FFD700;
+  flex-shrink: 0;
+}
+
+.warning-text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.warning-text p {
+  margin: 15px 0;
+}
+
+.warning-text strong {
+  font-weight: 700;
+}
+
+.warning-text ul {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.warning-text ul li {
+  margin: 8px 0;
+}
+
+.warning-text p:last-child {
+  text-align: center;
+  font-size: 16px;
+  animation: blink 1.5s infinite;
+}
+
+.mouse-click-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px;
+  position: relative;
+  top: 3px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.3; }
+}
