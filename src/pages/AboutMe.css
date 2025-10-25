@@ -1,0 +1,48 @@
+.about-me-view {
+  min-height: 100vh;
+  background: #e8e8e8;
+  padding-bottom: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.about-me-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about-me-intro {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-me-header h1 {
+    font-size: 32px;
+  }
+
+  .about-me-intro {
+    font-size: 16px;
+  }
+}

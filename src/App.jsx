@@ -4,6 +4,7 @@ import WarningScreen from './components/WarningScreen';
 import WiiMenu from './components/WiiMenu';
 import Projects from './pages/Projects';
 import ReadingGuide from './pages/ReadingGuide';
+import AboutMe from './pages/AboutMe';
 import PageTransition from './components/PageTransition/PageTransition';
 import './styles/main.css';
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<WiiMenu setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/reading-guide" element={<ReadingGuide />} />
+        <Route path="/about-me" element={<AboutMe />} />
       </Routes>
     </Router>
   );
