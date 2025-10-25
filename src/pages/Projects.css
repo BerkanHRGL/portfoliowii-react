@@ -7,14 +7,11 @@
   background-size: 20px 20px;
 }
 
-.project-navbar {
+.back-button {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 1000;
-}
-
-.back-button {
   background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 15px;
@@ -30,6 +27,45 @@
 .back-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-tabs {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-tab {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  border-radius: 10px;
+  cursor: url('/cursor/link select.cur'), pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.project-tab:hover {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.project-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
 }
 
 .stack-card-content {

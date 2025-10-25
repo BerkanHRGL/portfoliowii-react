@@ -17,7 +17,8 @@
   max-width: 54em;
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   width: 100%;
-  min-height: auto;
+  min-height: fit-content;
+  height: auto;
 }
 
 .card {

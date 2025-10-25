@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import MagicBento from '../components/MagicBento/MagicBento';
+import ExpandableBento from '../components/ExpandableBento/ExpandableBento';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -8,39 +9,117 @@ const AboutMe = () => {
   const aboutMeCards = [
     {
       color: '#060010',
-      title: 'Creative Developer',
-      description: 'ICT Media Design student passionate about web development and interactive experiences',
-      label: 'About Me'
+      title: 'Berkan Hergul',
+      description: 'Media Design Student',
+      label: 'About Me',
+      detailedContent: {
+        subtitle: '21 • Netherlands • Fontys University',
+        paragraphs: [
+          "Hey, I'm Berkan! I'm a Media Design student from the Netherlands and I love making things that not only look good, but actually work well for people too.",
+          "At Fontys I'm learning everything about UX/UI design, front-end development and visual design. What I enjoy most is combining my creativity with technical skills to create projects that actually help people.",
+          "Through my projects I've learned that good design starts with good research. I like talking to real users to understand what they need, and use those insights to make better designs."
+        ],
+        stats: [
+          { label: 'Age', value: '21' },
+          { label: 'Location', value: 'Netherlands' },
+          { label: 'Education', value: 'Fontys' }
+        ]
+      }
     },
     {
       color: '#060010',
-      title: 'Web Design',
-      description: 'Skilled in Figma, Adobe Illustrator, and creating user-centered designs',
-      label: 'Design'
+      title: 'Design Skills',
+      description: 'UI/UX Design, Prototyping & Visual Design',
+      label: 'Design',
+      detailedContent: {
+        subtitle: 'Design Tools & Skills',
+        paragraphs: [
+          "I use industry-standard design tools to create beautiful, user-centered interfaces that solve real problems."
+        ],
+        skills: [
+          { name: 'Figma', level: 90 },
+          { name: 'Photoshop', level: 85 },
+          { name: 'Illustrator', level: 85 },
+          { name: 'UI/UX Design', level: 88 },
+          { name: 'Prototyping', level: 85 }
+        ]
+      }
     },
     {
       color: '#060010',
-      title: 'Full Stack',
-      description: 'Experienced with HTML, CSS, JavaScript, React, and modern web technologies',
-      label: 'Development'
+      title: 'Development',
+      description: 'Front-end development with modern web technologies',
+      label: 'Development',
+      detailedContent: {
+        subtitle: 'Technical Skills',
+        paragraphs: [
+          "I bring designs to life with clean, modern code. I love working with the latest web technologies to create interactive experiences."
+        ],
+        skills: [
+          { name: 'HTML', level: 95 },
+          { name: 'CSS', level: 92 },
+          { name: 'JavaScript', level: 88 },
+          { name: 'VS Code', level: 90 },
+          { name: 'Git', level: 85 }
+        ]
+      }
     },
     {
       color: '#060010',
-      title: 'Ducks on Fire',
-      description: 'Lead web designer & developer for creative digital agency project',
-      label: 'Projects'
+      title: 'Research',
+      description: 'User research, testing & accessibility',
+      label: 'Research',
+      detailedContent: {
+        subtitle: 'Research Methods',
+        paragraphs: [
+          "Good design starts with good research. I use various research methods to understand user needs and validate design decisions."
+        ],
+        strengths: [
+          'User Research',
+          'A/B Testing',
+          'User Interviews',
+          'Accessibility',
+          'Usability Testing',
+          'Data Analysis'
+        ]
+      }
     },
     {
       color: '#060010',
-      title: 'Team Player',
-      description: 'Strong collaboration skills with experience in agile workflows and GitHub',
-      label: 'Teamwork'
+      title: 'Currently Working On',
+      description: 'Active projects and learning',
+      label: 'Projects',
+      detailedContent: {
+        subtitle: 'What I\'m Building',
+        paragraphs: [
+          "I'm always working on exciting projects that challenge me and help me grow as a designer and developer."
+        ],
+        highlights: [
+          '📱 Project X - Building an innovative media project using modern web technologies',
+          '🎓 Portfolio - Showcasing my journey as a media design student',
+          '🎨 Design System - Creating a personal design system for future projects',
+          '🔧 Learning React & GSAP - Building interactive animations'
+        ]
+      }
     },
     {
       color: '#060010',
-      title: 'Always Learning',
-      description: 'Constantly exploring new technologies, design trends, and creative solutions',
-      label: 'Growth'
+      title: 'Get In Touch',
+      description: 'Available for opportunities',
+      label: 'Contact',
+      detailedContent: {
+        subtitle: 'Let\'s Connect',
+        paragraphs: [
+          "I'm always open to new opportunities, collaborations, and interesting conversations about design and development.",
+          "Whether you have a project in mind, want to collaborate, or just want to chat about design - feel free to reach out!"
+        ],
+        highlights: [
+          '📧 Available for internships and freelance work',
+          '🌐 Based in the Netherlands',
+          '💼 Open to remote opportunities',
+          '🤝 Always happy to collaborate on interesting projects'
+        ]
+      }
     }
   ];
 
@@ -56,23 +135,11 @@ const AboutMe = () => {
         <div className="about-me-header">
           <h1>ABOUT ME</h1>
           <p className="about-me-intro">
-            Hi! I'm Berkan, an ICT Media Design student at Fontys with a passion for creating beautiful, interactive web experiences.
+            Click on any card to learn more about me!
           </p>
         </div>
 
-        <MagicBento
-          cardData={aboutMeCards}
-          textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
-          enableBorderGlow={true}
-          enableTilt={true}
-          enableMagnetism={true}
-          clickEffect={true}
-          spotlightRadius={300}
-          particleCount={12}
-          glowColor="132, 0, 255"
-        />
+        <ExpandableBento cardData={aboutMeCards} />
       </div>
 
       {/* Social icons */}
