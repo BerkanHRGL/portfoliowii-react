@@ -7,7 +7,9 @@ import './Projects.css';
 const Projects = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [activeProject, setActiveProject] = useState('ducks-on-fire');
+  const [activeProject, setActiveProject] = useState(
+    location.state?.projectType || 'ducks-on-fire'
+  );
 
   // Image arrays for carousels
   const inspirationImages = [
@@ -86,11 +88,13 @@ const Projects = () => {
             <p>
               Ducks on Fire is a creative digital media agency. While my teammates focused on
               creating the branding guide, game and logo designs, I was responsible for
-              researching, designing, and developing the agency's website. The project involved creating a professional web presence that accurately represents our creative agency brand and showcases our services to potential clients.
+              researching, designing, and developing the agency's website.
+            </p>
+            <p>
+              Currently, we're working with Iron Hearts on a photogrammetry project where we create 3D scans using photogrammetry techniques and implement them in Unreal Engine. This involves capturing real-world objects and environments to create realistic 3D assets.
             </p>
             <div className="project-meta">
-              <div><strong>Role:</strong> Web Designer & Developer</div>
-              <div><strong>Date:</strong> Sept 2024 - Now</div>
+              <div><strong>Date:</strong> Sept 2025 - Now</div>
             </div>
             <div className="tools-section">
               <h3>Tools Used</h3>
@@ -227,7 +231,7 @@ const Projects = () => {
         {/* 3D Modeling */}
         <ParallaxSection sectionClassName="project-section" id="3d-modeling">
           <div className="stack-card-content">
-            <h2 className="section-title">🎮 3D MODELING EXPERIMENTS</h2>
+            <h2 className="section-title">3D MODELING EXPERIMENTS</h2>
             <p>
               As part of our exploration into digital media technologies, our group experimented
               with photogrammetry to create 3D models from photographs. We tested multiple software
@@ -317,8 +321,7 @@ const Projects = () => {
             The goal was simple: make a portfolio that people actually remember and enjoy using, while still looking professional enough to showcase my work properly.
           </p>
           <div className="project-meta">
-            <div><strong>Role:</strong> Designer & Developer</div>
-            <div><strong>Date:</strong> 2025</div>
+            <div><strong>Date:</strong> Sept 2025 - Now</div>
           </div>
           <div className="tools-section">
             <h3>Tools Used</h3>
@@ -326,6 +329,7 @@ const Projects = () => {
               <li>Figma</li>
               <li>Visual Studio Code</li>
               <li>GitHub</li>
+              <li>Claude</li>
               <li>React</li>
               <li>HTML</li>
               <li>CSS</li>
@@ -339,7 +343,7 @@ const Projects = () => {
       <ParallaxSection sectionClassName="project-section" id="portfolio-research">
         <div className="stack-card-content">
           <h2 className="section-title">RESEARCH & INSPIRATION</h2>
-          <h3>The Wii Inspiration</h3>
+          <h3>Inspiration</h3>
           <p>
             I've always loved the Nintendo Wii's menu system. It's simple, playful, and just feels good to use. The way the channels bounce and move around, the clean design, the interactive elements, it all felt perfect for what I wanted to create.
           </p>
@@ -354,7 +358,7 @@ const Projects = () => {
       <ParallaxSection sectionClassName="project-section" id="portfolio-design">
         <div className="stack-card-content">
           <h2 className="section-title">DESIGN PROCESS</h2>
-          <h3>Early Concepts</h3>
+          <h3>Concepts</h3>
           <p>
             I started sketching out ideas in Figma, trying different layouts and seeing how I could adapt the Wii aesthetic to work as a portfolio. The biggest challenge was making it feel nostalgic and fun while still being professional.
           </p>
@@ -362,7 +366,7 @@ const Projects = () => {
             Some early versions were too playful and didn't feel serious enough for a portfolio. Others were too formal and lost the fun Wii vibe completely. It took a lot of iterations to find the right balance.
           </p>
           <Carousel images={portfolioDesignImages} alt="Design Process" />
-          <h3>Interactive Elements</h3>
+          <h3>Interactions</h3>
           <p>
             I wanted the portfolio to feel alive and interactive, not just static pages. The dot grid background that responds to your mouse, the cards that expand when you hover, the smooth page transitions - all of these came from wanting to create that same satisfying feeling the Wii menu had.
           </p>
@@ -375,18 +379,18 @@ const Projects = () => {
       {/* Development */}
       <ParallaxSection sectionClassName="project-section" id="portfolio-development">
         <div className="stack-card-content">
-          <h2 className="section-title">💻 DEVELOPMENT</h2>
+          <h2 className="section-title">DEVELOPMENT</h2>
           <p>
             Building this portfolio was definitely the most fun part. I got to bring all my design ideas to life and make everything actually work. I used React because it makes it easy to organize everything into components and manage all the interactive parts.
           </p>
-          <h3>The Tricky Parts</h3>
+          <h3>Challenges</h3>
           <p>
             The hardest thing to get right was probably the page transitions. I wanted it to feel like you're actually entering a Wii channel when you click on something. Getting that circular wipe effect to start exactly where you click and expand smoothly took a lot of trial and error.
           </p>
           <p>
             The dot grid background was also surprisingly complex. Making all those dots move smoothly when you move your mouse around, having them react to each other, and keeping it all running at 60fps - that took some serious optimization.
           </p>
-          <h3>Making It My Own</h3>
+          <h3>Customization</h3>
           <p>
             While I took heavy inspiration from the Wii, I didn't want to just copy it. I added modern design elements, updated the color scheme to fit my personal brand, and included interactive features that wouldn't have been possible on the actual Wii.
           </p>
@@ -399,15 +403,15 @@ const Projects = () => {
       {/* Challenges */}
       <ParallaxSection sectionClassName="project-section" id="portfolio-challenges">
         <div className="stack-card-content">
-          <h2 className="section-title">🎯 CHALLENGES I FACED</h2>
-          <h3>Keeping It Professional</h3>
+          <h2 className="section-title">CHALLENGES I FACED</h2>
+          <h3>Professionalism</h3>
           <p>
             The biggest challenge was definitely making sure the playful Wii theme didn't make my portfolio look unprofessional or childish. I had to be really careful about which elements I included and how I styled everything.
           </p>
           <p>
             I showed early versions to friends and classmates to get feedback. Some said it was too game-like, others said it wasn't playful enough. Finding that sweet spot took a lot of adjustments and fine-tuning.
           </p>
-          <h3>Making It Work Everywhere</h3>
+          <h3>Responsiveness</h3>
           <p>
             Another big challenge was making sure everything worked smoothly on different devices. The animations that looked perfect on my laptop sometimes lagged on phones, and the layout that worked great on desktop looked cramped on smaller screens.
           </p>
@@ -421,21 +425,21 @@ const Projects = () => {
       <ParallaxSection sectionClassName="project-section" id="portfolio-results">
         <div className="stack-card-content">
           <h2 className="section-title">WHAT I LEARNED</h2>
-          <h3>Design Thinking</h3>
+          <h3>Design</h3>
           <p>
             This project taught me a lot about balancing creativity with usability. It's easy to get carried away with cool effects and animations, but you have to always ask yourself: does this actually make the experience better, or is it just showing off?
           </p>
           <p>
             I learned to be critical of my own work and not get too attached to ideas that don't serve the end goal. Some animations I spent hours on got cut because they were distracting or didn't fit the overall experience.
           </p>
-          <h3>Technical Skills</h3>
+          <h3>Development</h3>
           <p>
             On the coding side, I got way better at React and working with animations. I learned how to optimize performance, manage complex state, and structure my code so it's actually maintainable and not just a giant mess.
           </p>
           <p>
             I also learned the importance of version control. Making regular commits and organizing my work made it so much easier when I needed to go back and change something or figure out why something broke.
           </p>
-          <h3>The Result</h3>
+          <h3>Result</h3>
           <p>
             I'm really proud of what I created. It feels unique and personal while still being professional. People who've seen it remember it, which was exactly what I was going for. It's not just another portfolio in a sea of identical websites.
           </p>

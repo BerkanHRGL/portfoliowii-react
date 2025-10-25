@@ -1,9 +1,9 @@
 :root {
-  --purple-primary: rgba(132, 0, 255, 1);
-  --purple-glow: rgba(132, 0, 255, 0.2);
-  --purple-border: rgba(132, 0, 255, 0.8);
-  --border-color: #392e4e;
-  --background-dark: #060010;
+  --wii-blue: #667eea;
+  --wii-blue-light: rgba(102, 126, 234, 0.2);
+  --wii-blue-border: rgba(102, 126, 234, 0.8);
+  --border-color: rgba(102, 126, 234, 0.3);
+  --background-light: rgba(255, 255, 255, 0.95);
 }
 
 .expandable-bento-grid {
@@ -30,45 +30,24 @@
 
 .bento-card {
   position: relative;
-  background: var(--background-dark);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
+  background: var(--background-light);
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
   padding: 1.5em;
   min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
+  cursor: url('/cursor/link select.cur'), pointer;
   transition: all 0.3s ease;
   overflow: hidden;
-}
-
-.bento-card::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 20px;
-  padding: 2px;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    var(--purple-primary),
-    transparent
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.bento-card:hover::before {
-  opacity: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .bento-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(132, 0, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+  border-color: var(--wii-blue-border);
 }
 
 .bento-card.dimmed {
@@ -85,8 +64,8 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--purple-primary);
-  background: rgba(132, 0, 255, 0.1);
+  color: var(--wii-blue);
+  background: var(--wii-blue-light);
   padding: 0.3em 0.8em;
   border-radius: 12px;
   font-weight: 600;
@@ -94,26 +73,26 @@
 
 .bento-card-content {
   flex: 1;
-  color: white;
+  color: #333;
 }
 
 .bento-title {
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 0.5em;
-  color: white;
+  color: #222;
 }
 
 .bento-description {
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: #666;
   margin: 0;
 }
 
 .click-hint {
   font-size: 12px;
-  color: var(--purple-primary);
+  color: var(--wii-blue);
   opacity: 0;
   transition: opacity 0.3s ease;
   margin-top: 1em;
@@ -151,11 +130,11 @@
 
 .expanded-view {
   position: fixed;
-  background: var(--background-dark);
-  border: 2px solid var(--purple-border);
-  border-radius: 24px;
+  background: var(--background-light);
+  border: 2px solid var(--wii-blue-border);
+  border-radius: 15px;
   transform: translate(-50%, -50%);
-  box-shadow: 0 20px 60px rgba(132, 0, 255, 0.4);
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
   overflow: hidden;
   z-index: 1001;
 }
@@ -165,7 +144,7 @@
   height: 100%;
   overflow-y: auto;
   padding: 2.5em;
-  color: white;
+  color: #333;
 }
 
 /* Scrollbar styling */
@@ -174,12 +153,12 @@
 }
 
 .expanded-content-inner::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
 
 .expanded-content-inner::-webkit-scrollbar-thumb {
-  background: var(--purple-primary);
+  background: var(--wii-blue);
   border-radius: 4px;
 }
 
@@ -190,11 +169,11 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(132, 0, 255, 0.2);
-  border: 1px solid var(--purple-border);
-  color: white;
+  background: var(--wii-blue-light);
+  border: 1px solid var(--wii-blue-border);
+  color: #333;
   font-size: 20px;
-  cursor: pointer;
+  cursor: url('/cursor/link select.cur'), pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,7 +182,8 @@
 }
 
 .close-button:hover {
-  background: var(--purple-primary);
+  background: var(--wii-blue);
+  color: white;
   transform: rotate(90deg);
 }
 
@@ -217,8 +197,8 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--purple-primary);
-  background: rgba(132, 0, 255, 0.1);
+  color: var(--wii-blue);
+  background: var(--wii-blue-light);
   padding: 0.4em 1em;
   border-radius: 12px;
   font-weight: 600;
@@ -229,13 +209,13 @@
   font-size: 36px;
   font-weight: 700;
   margin: 0.5em 0 0.3em;
-  color: white;
+  color: #222;
 }
 
 .expanded-subtitle {
   font-size: 20px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
+  color: #666;
   margin: 0;
 }
 
@@ -254,7 +234,7 @@
 .content-paragraph {
   font-size: 16px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
+  color: #555;
   margin: 0;
 }
 
@@ -269,27 +249,27 @@
 .stat-item {
   text-align: center;
   padding: 1.5em;
-  background: rgba(132, 0, 255, 0.05);
-  border: 1px solid rgba(132, 0, 255, 0.2);
-  border-radius: 16px;
+  background: var(--wii-blue-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .stat-item:hover {
-  background: rgba(132, 0, 255, 0.1);
+  background: rgba(102, 126, 234, 0.3);
   transform: translateY(-2px);
 }
 
 .stat-value {
   font-size: 32px;
   font-weight: 700;
-  color: var(--purple-primary);
+  color: var(--wii-blue);
   margin-bottom: 0.3em;
 }
 
 .stat-label {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #666;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -301,7 +281,7 @@
 .learning-section h4 {
   font-size: 18px;
   font-weight: 600;
-  color: white;
+  color: #222;
   margin: 0 0 1em;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -361,10 +341,10 @@
 .highlights-list li {
   padding: 0.8em 1em;
   margin-bottom: 0.8em;
-  background: rgba(132, 0, 255, 0.05);
-  border-left: 3px solid var(--purple-primary);
+  background: var(--wii-blue-light);
+  border-left: 3px solid var(--wii-blue);
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.85);
+  color: #555;
   font-size: 15px;
 }
 
@@ -379,18 +359,18 @@
 .strength-tag,
 .learning-tag {
   padding: 0.8em 1.2em;
-  background: rgba(132, 0, 255, 0.1);
-  border: 1px solid rgba(132, 0, 255, 0.3);
+  background: var(--wii-blue-light);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   text-align: center;
   font-size: 14px;
-  color: white;
+  color: #333;
   transition: all 0.3s ease;
 }
 
 .strength-tag:hover,
 .learning-tag:hover {
-  background: rgba(132, 0, 255, 0.2);
+  background: rgba(102, 126, 234, 0.3);
   transform: translateY(-2px);
 }
 

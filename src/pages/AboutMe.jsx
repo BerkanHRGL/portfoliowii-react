@@ -36,12 +36,12 @@ const AboutMe = () => {
         paragraphs: [
           "I use industry-standard design tools to create beautiful, user-centered interfaces that solve real problems."
         ],
-        skills: [
-          { name: 'Figma', level: 90 },
-          { name: 'Photoshop', level: 85 },
-          { name: 'Illustrator', level: 85 },
-          { name: 'UI/UX Design', level: 88 },
-          { name: 'Prototyping', level: 85 }
+        strengths: [
+          'Figma',
+          'Photoshop',
+          'Illustrator',
+          'UI/UX Design',
+          'Prototyping'
         ]
       }
     },
@@ -55,12 +55,13 @@ const AboutMe = () => {
         paragraphs: [
           "I bring designs to life with clean, modern code. I love working with the latest web technologies to create interactive experiences."
         ],
-        skills: [
-          { name: 'HTML', level: 95 },
-          { name: 'CSS', level: 92 },
-          { name: 'JavaScript', level: 88 },
-          { name: 'VS Code', level: 90 },
-          { name: 'Git', level: 85 }
+        strengths: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'React',
+          'VS Code',
+          'Git'
         ]
       }
     },
@@ -95,10 +96,8 @@ const AboutMe = () => {
           "I'm always working on exciting projects that challenge me and help me grow as a designer and developer."
         ],
         highlights: [
-          '📱 Project X - Building an innovative media project using modern web technologies',
-          '🎓 Portfolio - Showcasing my journey as a media design student',
-          '🎨 Design System - Creating a personal design system for future projects',
-          '🔧 Learning React & GSAP - Building interactive animations'
+          'Ducks on Fire - Creative digital agency website and photogrammetry project with Iron Hearts using Unreal Engine',
+          'Wii-Inspired Portfolio - Interactive portfolio with smooth animations and playful Wii menu design'
         ]
       }
     },
@@ -111,13 +110,13 @@ const AboutMe = () => {
         subtitle: 'Let\'s Connect',
         paragraphs: [
           "I'm always open to new opportunities, collaborations, and interesting conversations about design and development.",
-          "Whether you have a project in mind, want to collaborate, or just want to chat about design - feel free to reach out!"
+          "Whether you have a project in mind, want to collaborate, or just want to chat about design, feel free to reach out!"
         ],
         highlights: [
-          '📧 Available for internships and freelance work',
-          '🌐 Based in the Netherlands',
-          '💼 Open to remote opportunities',
-          '🤝 Always happy to collaborate on interesting projects'
+          'Available for internships and freelance work',
+          'Based in the Netherlands',
+          'Open to remote opportunities',
+          'Always happy to collaborate on interesting projects'
         ]
       }
     }
