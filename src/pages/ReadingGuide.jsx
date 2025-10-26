@@ -2,17 +2,25 @@ import { useNavigate } from 'react-router-dom';
 import ParallaxScroll, { ParallaxSection } from '../components/ParallaxScroll/ParallaxScroll';
 import './ReadingGuide.css';
 
-const ReadingGuide = () => {
+const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
   const navigate = useNavigate();
 
   const handleEvidenceClick = (sectionId, projectType = 'ducks-on-fire') => {
     navigate('/projects', { state: { scrollTo: sectionId, projectType } });
   };
 
+  const handleBackToMenu = (event) => {
+    setClickPosition({ x: event.clientX, y: event.clientY });
+    setIsTransitioning(true);
+    setTimeout(() => {
+      navigate('/');
+    }, 400);
+  };
+
   return (
     <div className="reading-guide-view">
       <div className="project-navbar">
-        <button className="back-button" onClick={() => navigate('/')}>
+        <button className="back-button" onClick={handleBackToMenu}>
           ← Back to Menu
         </button>
       </div>

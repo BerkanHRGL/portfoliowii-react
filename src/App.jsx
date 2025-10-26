@@ -34,9 +34,9 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<WiiMenu setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/reading-guide" element={<ReadingGuide />} />
-        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/projects" element={<Projects setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
+        <Route path="/reading-guide" element={<ReadingGuide setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
+        <Route path="/about-me" element={<AboutMe setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
       </Routes>
     </Router>
   );

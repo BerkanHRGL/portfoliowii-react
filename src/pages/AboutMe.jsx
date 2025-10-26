@@ -3,8 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import ExpandableBento from '../components/ExpandableBento/ExpandableBento';
 import './AboutMe.css';
 
-const AboutMe = () => {
+const AboutMe = ({ setIsTransitioning, setClickPosition }) => {
   const navigate = useNavigate();
+
+  const handleBackToMenu = (event) => {
+    setClickPosition({ x: event.clientX, y: event.clientY });
+    setIsTransitioning(true);
+    setTimeout(() => {
+      navigate('/');
+    }, 400);
+  };
 
   const aboutMeCards = [
     {
@@ -125,7 +133,7 @@ const AboutMe = () => {
   return (
     <div className="about-me-view">
       <div className="project-navbar">
-        <button className="back-button" onClick={() => navigate('/')}>
+        <button className="back-button" onClick={handleBackToMenu}>
           ← Back to Menu
         </button>
       </div>

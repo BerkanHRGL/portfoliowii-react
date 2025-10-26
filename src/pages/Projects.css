@@ -243,3 +243,233 @@
   height: 30px;
   object-fit: cover;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .project-main-title {
+    font-size: 40px;
+  }
+
+  .stack-card-content h2:not(.section-title):not(.project-main-title) {
+    font-size: 24px;
+  }
+
+  .stack-card-content h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-view {
+    overflow-x: hidden;
+  }
+
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .project-tabs {
+    top: 15px;
+    right: 15px;
+    gap: 0.4rem;
+    padding: 5px;
+  }
+
+  .project-tab {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .stack-card-content {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .project-main-title {
+    font-size: 32px;
+    margin: 0 0 1rem 0;
+  }
+
+  .stack-card-content h2:not(.section-title):not(.project-main-title) {
+    font-size: 22px;
+    margin: 1.5rem 0 0.8rem 0;
+  }
+
+  .stack-card-content h3 {
+    font-size: 17px;
+    margin: 1.2rem 0 0.6rem 0;
+  }
+
+  .stack-card-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem;
+    font-size: 14px;
+  }
+
+  .tools-section {
+    padding: 1.2rem;
+  }
+
+  .tools-section h3 {
+    font-size: 16px;
+  }
+
+  .tools-section ul {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .tools-section li {
+    font-size: 14px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .project-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .social-icon.left {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .social-icon.right {
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    top: 12px;
+    left: 12px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .project-tabs {
+    top: 12px;
+    right: 12px;
+    gap: 0.3rem;
+    padding: 4px;
+  }
+
+  .project-tab {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .stack-card-content {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .project-main-title {
+    font-size: 26px;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .stack-card-content h2:not(.section-title):not(.project-main-title) {
+    font-size: 20px;
+    margin: 1.2rem 0 0.6rem 0;
+  }
+
+  .stack-card-content h3 {
+    font-size: 16px;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .stack-card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .project-meta {
+    gap: 0.8rem;
+    padding: 1rem;
+    font-size: 13px;
+  }
+
+  .tools-section {
+    padding: 1rem;
+  }
+
+  .tools-section h3 {
+    font-size: 15px;
+  }
+
+  .tools-section ul {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-section li {
+    font-size: 13px;
+  }
+
+  .project-link {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+
+  .project-btn {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+
+  .social-icon.left {
+    left: 15px;
+    bottom: 20px;
+  }
+
+  .social-icon.right {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-img {
+    width: 22px;
+    height: 22px;
+  }
+}

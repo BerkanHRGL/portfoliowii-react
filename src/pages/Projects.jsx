@@ -4,12 +4,20 @@ import ParallaxScroll, { ParallaxSection } from '../components/ParallaxScroll/Pa
 import Carousel from '../components/Carousel';
 import './Projects.css';
 
-const Projects = () => {
+const Projects = ({ setIsTransitioning, setClickPosition }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeProject, setActiveProject] = useState(
     location.state?.projectType || 'ducks-on-fire'
   );
+
+  const handleBackToMenu = (event) => {
+    setClickPosition({ x: event.clientX, y: event.clientY });
+    setIsTransitioning(true);
+    setTimeout(() => {
+      navigate('/');
+    }, 400);
+  };
 
   // Image arrays for carousels
   const inspirationImages = [
@@ -468,7 +476,7 @@ const Projects = () => {
 
   return (
     <div className="project-view">
-      <button className="back-button" onClick={() => navigate('/')}>
+      <button className="back-button" onClick={handleBackToMenu}>
         ← Back to Menu
       </button>
 

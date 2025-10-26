@@ -375,7 +375,55 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .expandable-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9em;
+  }
+
+  .bento-card {
+    min-height: 200px;
+    padding: 1.3em;
+  }
+
+  .bento-title {
+    font-size: 22px;
+  }
+
+  .bento-description {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
+  .expandable-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+    padding: 0.8em;
+  }
+
+  .bento-card {
+    min-height: 180px;
+    padding: 1.2em;
+  }
+
+  .bento-label {
+    font-size: 11px;
+    padding: 0.25em 0.7em;
+  }
+
+  .bento-title {
+    font-size: 20px;
+  }
+
+  .bento-description {
+    font-size: 13px;
+  }
+
+  .click-hint {
+    font-size: 11px;
+  }
+
   .expanded-view {
     width: 95vw !important;
     height: 95vh !important;
@@ -387,20 +435,201 @@
     padding: 1.5em;
   }
 
+  .close-button {
+    top: 1em;
+    right: 1em;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .expanded-header {
+    margin-bottom: 1.5em;
+    padding-right: 45px;
+  }
+
+  .expanded-label {
+    font-size: 11px;
+    padding: 0.35em 0.9em;
+  }
+
   .expanded-title {
     font-size: 28px;
+    margin: 0.4em 0 0.25em;
   }
 
   .expanded-subtitle {
     font-size: 16px;
   }
 
+  .expanded-body {
+    gap: 1.5em;
+  }
+
+  .content-paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .stat-item {
+    padding: 1.2em;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+  }
+
+  .skills-section h4,
+  .highlights-section h4,
+  .strengths-section h4,
+  .learning-section h4 {
+    font-size: 16px;
+  }
+
+  .highlights-list li {
+    font-size: 14px;
+    padding: 0.7em 0.9em;
   }
 
   .strengths-grid,
   .learning-grid {
     grid-template-columns: 1fr;
+    gap: 0.7em;
+  }
+
+  .strength-tag,
+  .learning-tag {
+    padding: 0.7em 1em;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expandable-bento-grid {
+    gap: 0.7em;
+    padding: 0.6em;
+  }
+
+  .bento-card {
+    min-height: 160px;
+    padding: 1em;
+    border-radius: 12px;
+  }
+
+  .bento-label {
+    font-size: 10px;
+    padding: 0.25em 0.6em;
+    letter-spacing: 0.8px;
+  }
+
+  .bento-title {
+    font-size: 18px;
+    margin: 0 0 0.4em;
+  }
+
+  .bento-description {
+    font-size: 12px;
+  }
+
+  .click-hint {
+    font-size: 10px;
+    margin-top: 0.8em;
+  }
+
+  .expanded-view {
+    width: 98vw !important;
+    height: 98vh !important;
+  }
+
+  .expanded-content-inner {
+    padding: 1em;
+  }
+
+  .close-button {
+    top: 0.8em;
+    right: 0.8em;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .expanded-header {
+    margin-bottom: 1.2em;
+    padding-right: 40px;
+  }
+
+  .expanded-label {
+    font-size: 10px;
+    padding: 0.3em 0.8em;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.8em;
+  }
+
+  .expanded-title {
+    font-size: 24px;
+    margin: 0.3em 0 0.2em;
+  }
+
+  .expanded-subtitle {
+    font-size: 15px;
+  }
+
+  .expanded-body {
+    gap: 1.2em;
+  }
+
+  .content-paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .stats-grid {
+    gap: 0.8em;
+  }
+
+  .stat-item {
+    padding: 1em;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .skills-section h4,
+  .highlights-section h4,
+  .strengths-section h4,
+  .learning-section h4 {
+    font-size: 15px;
+    margin: 0 0 0.8em;
+  }
+
+  .highlights-list li {
+    font-size: 13px;
+    padding: 0.6em 0.8em;
+    margin-bottom: 0.6em;
+  }
+
+  .strengths-grid,
+  .learning-grid {
+    gap: 0.6em;
+  }
+
+  .strength-tag,
+  .learning-tag {
+    padding: 0.6em 0.9em;
+    font-size: 12px;
   }
 }

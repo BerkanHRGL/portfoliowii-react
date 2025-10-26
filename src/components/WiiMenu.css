@@ -314,3 +314,169 @@
   height: 30px;
   object-fit: cover;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .channels-grid {
+    grid-template-columns: repeat(4, 250px);
+    gap: 20px;
+    height: 500px;
+  }
+
+  .wii-menu {
+    padding: 30px 20px;
+  }
+
+  .bottom-profile {
+    bottom: 30px;
+  }
+
+  .profile-name {
+    font-size: 20px;
+  }
+
+  .profile-subtitle {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wii-menu {
+    padding: 20px 10px;
+  }
+
+  .channels-grid {
+    grid-template-columns: repeat(3, 220px);
+    gap: 15px;
+    height: 450px;
+    margin-bottom: 100px;
+  }
+
+  .channel-card {
+    border-radius: 15px;
+  }
+
+  .channel-content {
+    padding: 15px;
+  }
+
+  .channel-text {
+    font-size: 16px;
+  }
+
+  .channel-subtitle {
+    font-size: 11px;
+  }
+
+  .channel-action {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .bottom-profile {
+    bottom: 25px;
+  }
+
+  .profile-name {
+    font-size: 18px;
+  }
+
+  .profile-subtitle {
+    font-size: 10px;
+  }
+
+  .social-icon.left {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .social-icon.right {
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wii-menu {
+    padding: 15px 5px;
+  }
+
+  .channels-grid {
+    grid-template-columns: repeat(2, 160px);
+    gap: 12px;
+    height: 380px;
+    margin-bottom: 80px;
+  }
+
+  .channel-card {
+    border-radius: 12px;
+  }
+
+  .channel-content {
+    padding: 12px;
+  }
+
+  .channel-text {
+    font-size: 14px;
+  }
+
+  .channel-subtitle {
+    font-size: 10px;
+  }
+
+  .channel-action {
+    font-size: 10px;
+    padding: 5px 10px;
+    margin-top: 8px;
+  }
+
+  .bottom-profile {
+    bottom: 20px;
+    padding: 10px 15px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .profile-subtitle {
+    font-size: 9px;
+  }
+
+  .social-icon.left {
+    left: 15px;
+    bottom: 20px;
+  }
+
+  .social-icon.right {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Adjust fade gradients for mobile */
+  .channels-grid::after,
+  .channels-grid::before {
+    width: 80px;
+  }
+}

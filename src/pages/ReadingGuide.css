@@ -176,3 +176,256 @@
   color: #444;
   margin: 0.5rem 0;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .reading-guide-section h1 {
+    font-size: 40px;
+  }
+
+  .reading-guide-section h2 {
+    font-size: 22px;
+  }
+
+  .intro {
+    font-size: 17px;
+  }
+
+  .learning-outcome h2 {
+    font-size: 18px;
+  }
+
+  .learning-outcome h3 {
+    font-size: 15px;
+  }
+
+  .learning-outcome p {
+    font-size: 15px;
+  }
+
+  .learning-outcome li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reading-guide-view {
+    background-size: 15px 15px;
+  }
+
+  .reading-guide-section {
+    padding: 1.5rem;
+  }
+
+  .reading-guide-section h1 {
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+  }
+
+  .reading-guide-section h2 {
+    font-size: 20px;
+    margin-bottom: 0.8rem;
+  }
+
+  .intro {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .semester-section {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .semester-section h3 {
+    font-size: 18px;
+  }
+
+  .portfolio-format h2 {
+    font-size: 18px;
+  }
+
+  .portfolio-format li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .learning-outcome {
+    padding: 1.5rem;
+  }
+
+  .learning-outcome.reflection {
+    padding: 1.5rem;
+  }
+
+  .learning-outcome h2 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+
+  .learning-outcome h3 {
+    font-size: 15px;
+    margin: 1.2rem 0 0.8rem 0;
+  }
+
+  .learning-outcome p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0.8rem 0;
+  }
+
+  .learning-outcome ul {
+    padding-left: 1.2rem;
+    margin: 0.8rem 0;
+  }
+
+  .learning-outcome li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0.6rem 0;
+  }
+
+  .evidence-link {
+    font-size: 15px;
+  }
+
+  .improvement-section {
+    padding: 1.2rem;
+    margin: 1.2rem 0;
+  }
+
+  .improvement-section h4 {
+    font-size: 15px;
+    margin: 0.8rem 0 0.6rem 0;
+  }
+
+  .improvement-section ul {
+    margin: 0.4rem 0 0.8rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .improvement-section li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0.4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .reading-guide-view {
+    background-size: 12px 12px;
+  }
+
+  .reading-guide-section {
+    padding: 1rem;
+  }
+
+  .reading-guide-section h1 {
+    font-size: 28px;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .reading-guide-section h2 {
+    font-size: 18px;
+    margin-bottom: 0.7rem;
+  }
+
+  .intro {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .info-row {
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+  }
+
+  .semester-section {
+    padding: 1rem 1.2rem;
+  }
+
+  .semester-section h3 {
+    font-size: 16px;
+  }
+
+  .portfolio-format h2 {
+    font-size: 16px;
+  }
+
+  .portfolio-format li {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .learning-outcome {
+    padding: 1.2rem;
+  }
+
+  .learning-outcome.reflection {
+    padding: 1.2rem;
+  }
+
+  .learning-outcome h2 {
+    font-size: 16px;
+    margin-bottom: 0.7rem;
+  }
+
+  .learning-outcome h3 {
+    font-size: 14px;
+    margin: 1rem 0 0.6rem 0;
+    letter-spacing: 0.3px;
+  }
+
+  .learning-outcome p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0.7rem 0;
+  }
+
+  .learning-outcome ul {
+    padding-left: 1rem;
+    margin: 0.7rem 0;
+  }
+
+  .learning-outcome li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+
+  .evidence-link {
+    font-size: 14px;
+  }
+
+  .improvement-section {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+  }
+
+  .improvement-section h4 {
+    font-size: 14px;
+    margin: 0.7rem 0 0.5rem 0;
+  }
+
+  .improvement-section ul {
+    margin: 0.3rem 0 0.7rem 0;
+    padding-left: 1rem;
+  }
+
+  .improvement-section li {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0.35rem 0;
+  }
+}
