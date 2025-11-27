@@ -15,7 +15,7 @@ const WiiMenu = ({ setIsTransitioning, setClickPosition }) => {
     { name: 'projects', subtitle: 'NEW', path: '/projects', className: 'projects' },
     { name: 'reading guide', subtitle: 'NEW', path: '/reading-guide', className: 'reading' },
     { name: 'learning outcomes', subtitle: 'coming soon...', path: null, className: 'learning' },
-    { name: 'berkan.dev', subtitle: null, path: null, className: 'empty' },
+    { name: 'projects apple', subtitle: 'A/B TEST', path: '/projects-apple', className: 'projects-apple' },
     { name: 'berkan.dev', subtitle: null, path: null, className: 'empty' },
     { name: 'about me', subtitle: 'NEW', path: '/about-me', className: 'about' },
     { name: 'contact', subtitle: 'coming soon...', path: null, className: 'contact' },

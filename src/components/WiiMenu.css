@@ -83,10 +83,8 @@
   position: relative;
   cursor: url('/cursor/link select.cur'), pointer;
   transition: all 0.3s ease;
-  box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.1),
-    0 2px 5px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border: none;
   overflow: hidden;
 }
 
@@ -104,9 +102,7 @@
 
 .channel-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.15),
-    0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 
 .channel-content {
@@ -125,8 +121,9 @@
 .channel-text {
   font-size: 18px;
   color: #333;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 0;
+  letter-spacing: -0.01em;
 }
 
 .channel-subtitle {
@@ -135,7 +132,7 @@
   font-weight: 400;
   margin-top: 5px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
 }
 
 /* Specific channel styles */
@@ -150,7 +147,22 @@
 .channel-card.projects .channel-text,
 .channel-card.projects .channel-subtitle {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.channel-card.projects-apple {
+  background: linear-gradient(135deg, #1d1d1f 0%, #000000 100%);
+  border: none;
+}
+
+.channel-card.projects-apple .hover-circle {
+  background: rgba(102, 126, 234, 0.3);
+}
+
+.channel-card.projects-apple .channel-text,
+.channel-card.projects-apple .channel-subtitle {
+  color: white;
+  font-weight: 400;
 }
 
 .channel-card.reading {
@@ -164,7 +176,7 @@
 .channel-card.reading .channel-text,
 .channel-card.reading .channel-subtitle {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .channel-card.learning {
@@ -174,7 +186,7 @@
 .channel-card.learning .channel-text,
 .channel-card.learning .channel-subtitle {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .channel-card.about {
@@ -184,7 +196,7 @@
 .channel-card.about .channel-text,
 .channel-card.about .channel-subtitle {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .channel-card.contact {
@@ -194,7 +206,7 @@
 .channel-card.contact .channel-text,
 .channel-card.contact .channel-subtitle {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .channel-card.skills {
@@ -204,7 +216,7 @@
 .channel-card.skills .channel-text,
 .channel-card.skills .channel-subtitle {
   color: #333;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .channel-card.experience {
@@ -214,7 +226,7 @@
 .channel-card.experience .channel-text,
 .channel-card.experience .channel-subtitle {
   color: #333;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .channel-card.empty {
@@ -230,6 +242,7 @@
 .channel-card.empty .channel-text {
   color: #999;
   font-size: 12px;
+  font-weight: 400;
 }
 
 /* Pixel transition flipped card styles */
@@ -362,10 +375,14 @@
 
   .channel-text {
     font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
   .channel-subtitle {
     font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
   }
 
   .channel-action {
@@ -419,7 +436,7 @@
   }
 
   .channel-card {
-    border-radius: 12px;
+    border-radius: 15px;
   }
 
   .channel-content {
@@ -428,10 +445,14 @@
 
   .channel-text {
     font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
   .channel-subtitle {
     font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
   }
 
   .channel-action {

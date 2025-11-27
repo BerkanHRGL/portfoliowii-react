@@ -25,7 +25,8 @@ const AboutMe = ({ setIsTransitioning, setClickPosition }) => {
         paragraphs: [
           "Hey, I'm Berkan! I'm a Media Design student from the Netherlands and I love making things that not only look good, but actually work well for people too.",
           "At Fontys I'm learning everything about UX/UI design, front-end development and visual design. What I enjoy most is combining my creativity with technical skills to create projects that actually help people.",
-          "Through my projects I've learned that good design starts with good research. I like talking to real users to understand what they need, and use those insights to make better designs."
+          "Through my projects I've learned that good design starts with good research. I like talking to real users to understand what they need, and use those insights to make better designs.",
+          "For my future, I want to focus on UX/UI design, front-end development, and mobile app development. That's where I see myself growing as a professional - creating beautiful, intuitive interfaces that people actually enjoy using."
         ],
         stats: [
           { label: 'Age', value: '21' },

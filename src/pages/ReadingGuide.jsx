@@ -33,6 +33,9 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <p className="intro">
               Hi! I'm Berkan, an ICT Media Design student at Fontys. I chose to create an external website as my portfolio because I wanted to show my coding skills and create something unique that represents my personality and work style.
             </p>
+            <p className="intro">
+              My passion lies in UX/UI design, front-end development, and mobile app development. Through this semester, I've been actively exploring these areas to understand where my future career trajectory is heading. I want to become a designer-developer who can create beautiful, intuitive interfaces that people actually enjoy using.
+            </p>
             <div className="info-row">
               <div className="portfolio-format">
                 <h2>PORTFOLIO FORMAT</h2>
@@ -76,15 +79,15 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             </div>
             <h3>EVIDENCE</h3>
             <ul>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('research')}>Agency Research Process:</button></strong> Researched creative digital agencies to understand what makes effective agency websites and how to position Ducks on Fire in the market.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('user-testing')}>User Testing Sessions:</button></strong> Showed design iterations to teammates, classmates, and friends to get feedback on visual appeal, clarity, and user experience.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('design-process')}>Design Development in Figma:</button></strong> Created multiple design concepts in Figma, trying different approaches to present the agency's services before choosing the final direction.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('development')}>Website Implementation:</button></strong> Coded the final website using HTML, CSS, and JavaScript, turning the visual designs into a working, responsive website.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('poster')}>Infographic Poster Design:</button></strong> Created an infographic poster to visually communicate the agency's information, applying visual design techniques and brand guidelines.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('3d-modeling')}>3D Modeling with Photogrammetry:</button></strong> Explored emerging technology by experimenting with PhotoModeler for photogrammetry to create 3D models from photographs.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-research', 'portfolio')}>Portfolio Research & Inspiration:</button></strong> Researched other portfolios and analyzed the Wii menu system to create a unique, themed portfolio that stands out while maintaining professionalism.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-design', 'portfolio')}>Portfolio Design Process:</button></strong> Created multiple design iterations in Figma, balancing playful Wii aesthetics with professional presentation through user-centered design principles.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-development', 'portfolio')}>Interactive Features Development:</button></strong> Developed interactive elements like the dot grid physics system, expandable cards, and smooth page transitions using modern web technologies (React, GSAP).</li>
+              <li><strong><a className="evidence-link" href="/projects#research" target="_blank" rel="noopener noreferrer">Agency Research Process:</a></strong> Researched creative digital agencies to understand what makes effective agency websites and how to position Ducks on Fire in the market.</li>
+              <li><strong><a className="evidence-link" href="/projects#user-testing" target="_blank" rel="noopener noreferrer">User Testing Sessions:</a></strong> Showed design iterations to teammates, classmates, and friends to get feedback on visual appeal, clarity, and user experience.</li>
+              <li><strong><a className="evidence-link" href="/projects#design-process" target="_blank" rel="noopener noreferrer">Design Development in Figma:</a></strong> Created multiple design concepts in Figma, trying different approaches to present the agency's services before choosing the final direction.</li>
+              <li><strong><a className="evidence-link" href="/projects#development" target="_blank" rel="noopener noreferrer">Website Implementation:</a></strong> Coded the final website using HTML, CSS, and JavaScript, turning the visual designs into a working, responsive website.</li>
+              <li><strong><a className="evidence-link" href="/projects#poster" target="_blank" rel="noopener noreferrer">Infographic Poster Design:</a></strong> Created an infographic poster to visually communicate the agency's information, applying visual design techniques and brand guidelines.</li>
+              <li><strong><a className="evidence-link" href="/projects#3d-modeling" target="_blank" rel="noopener noreferrer">3D Modeling with Photogrammetry:</a></strong> Explored emerging technology by experimenting with PhotoModeler for photogrammetry to create 3D models from photographs.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-research" target="_blank" rel="noopener noreferrer">Portfolio Research & Inspiration:</a></strong> Researched other portfolios and analyzed the Wii menu system to create a unique, themed portfolio that stands out while maintaining professionalism.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-design" target="_blank" rel="noopener noreferrer">Portfolio Design Process:</a></strong> Created multiple design iterations in Figma, balancing playful Wii aesthetics with professional presentation through user-centered design principles.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-development" target="_blank" rel="noopener noreferrer">Interactive Features Development:</a></strong> Developed interactive elements like the dot grid physics system, expandable cards, and smooth page transitions using modern web technologies (React, GSAP).</li>
             </ul>
           </div>
         </ParallaxSection>
@@ -113,12 +116,12 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             </div>
             <h3>EVIDENCE</h3>
             <ul>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('development')}>GitHub Version Control:</button></strong> Used GitHub for the Ducks on Fire project with commit messages to track development progress and changes.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('design-process')}>Brand Guide Implementation:</button></strong> Worked with the brand guide created by teammates to keep visual consistency in colors, fonts, and visual elements throughout the website design.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('team-collaboration')}>Team Communication:</button></strong> Used WhatsApp for daily team communication and Flowspace for task management and sharing project information.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('overview')}>Design Documentation:</button></strong> Created clear documentation of the design process from research to final implementation.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-results', 'portfolio')}>Portfolio GitHub Version Control:</button></strong> Used GitHub for both the original and React versions of the portfolio, maintaining clear commit history and documentation of technical decisions.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-design', 'portfolio')}>Portfolio Design Documentation:</button></strong> Documented the complete design journey from research and inspiration to final implementation, showing clear reasoning for design choices.</li>
+              <li><strong><a className="evidence-link" href="/projects#development" target="_blank" rel="noopener noreferrer">GitHub Version Control:</a></strong> Used GitHub for the Ducks on Fire project with commit messages to track development progress and changes.</li>
+              <li><strong><a className="evidence-link" href="/projects#design-process" target="_blank" rel="noopener noreferrer">Brand Guide Implementation:</a></strong> Worked with the brand guide created by teammates to keep visual consistency in colors, fonts, and visual elements throughout the website design.</li>
+              <li><strong><a className="evidence-link" href="/projects#team-collaboration" target="_blank" rel="noopener noreferrer">Team Communication:</a></strong> Used WhatsApp for daily team communication and Flowspace for task management and sharing project information.</li>
+              <li><strong><a className="evidence-link" href="/projects#overview" target="_blank" rel="noopener noreferrer">Design Documentation:</a></strong> Created clear documentation of the design process from research to final implementation.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-results" target="_blank" rel="noopener noreferrer">Portfolio GitHub Version Control:</a></strong> Used GitHub for both the original and React versions of the portfolio, maintaining clear commit history and documentation of technical decisions.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-design" target="_blank" rel="noopener noreferrer">Portfolio Design Documentation:</a></strong> Documented the complete design journey from research and inspiration to final implementation, showing clear reasoning for design choices.</li>
             </ul>
           </div>
         </ParallaxSection>
@@ -149,14 +152,14 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             </div>
             <h3>EVIDENCE</h3>
             <ul>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('design-process')}>Multiple Design Iterations:</button></strong> Created several different design concepts in Figma for the Ducks on Fire website, each trying different approaches to show the agency's services.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('user-testing')}>Feedback Integration:</button></strong> Collected feedback from teammates and classmates on design iterations and used this to make improvements in the next version.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('research')}>Research to Final Design Process:</button></strong> Documented the complete process from initial agency research, through inspiration gathering, to multiple design iterations, to the final design.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('design-process')}>Iterative Improvement:</button></strong> Each design version built on insights from the previous one, showing clear connections between iterations and reasons for changes.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('poster')}>Poster Design Iterations:</button></strong> Created an initial poster design, gathered feedback from team and teachers, and refined it into a final version with improved visual hierarchy and brand consistency.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('3d-modeling')}>Testing Different Solutions:</button></strong> Experimented with PhotoModeler for 3D modeling, evaluated the disappointing results, and learned from the team's comparison with other software like RealityScan to understand which tools work better for photogrammetry.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-design', 'portfolio')}>Portfolio Design Iterations:</button></strong> Created multiple Figma iterations for the portfolio, balancing playful and professional elements, with each version building on feedback about being too game-like or too formal.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-challenges', 'portfolio')}>Portfolio Feedback & Refinement:</button></strong> Showed early versions to friends and classmates, received feedback about professionalism balance, and adjusted the design to find the right sweet spot.</li>
+              <li><strong><a className="evidence-link" href="/projects#design-process" target="_blank" rel="noopener noreferrer">Multiple Design Iterations:</a></strong> Created several different design concepts in Figma for the Ducks on Fire website, each trying different approaches to show the agency's services.</li>
+              <li><strong><a className="evidence-link" href="/projects#user-testing" target="_blank" rel="noopener noreferrer">Feedback Integration:</a></strong> Collected feedback from teammates and classmates on design iterations and used this to make improvements in the next version.</li>
+              <li><strong><a className="evidence-link" href="/projects#research" target="_blank" rel="noopener noreferrer">Research to Final Design Process:</a></strong> Documented the complete process from initial agency research, through inspiration gathering, to multiple design iterations, to the final design.</li>
+              <li><strong><a className="evidence-link" href="/projects#design-process" target="_blank" rel="noopener noreferrer">Iterative Improvement:</a></strong> Each design version built on insights from the previous one, showing clear connections between iterations and reasons for changes.</li>
+              <li><strong><a className="evidence-link" href="/projects#poster" target="_blank" rel="noopener noreferrer">Poster Design Iterations:</a></strong> Created an initial poster design, gathered feedback from team and teachers, and refined it into a final version with improved visual hierarchy and brand consistency.</li>
+              <li><strong><a className="evidence-link" href="/projects#3d-modeling" target="_blank" rel="noopener noreferrer">Testing Different Solutions:</a></strong> Experimented with PhotoModeler for 3D modeling, evaluated the disappointing results, and learned from the team's comparison with other software like RealityScan to understand which tools work better for photogrammetry.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-design" target="_blank" rel="noopener noreferrer">Portfolio Design Iterations:</a></strong> Created multiple Figma iterations for the portfolio, balancing playful and professional elements, with each version building on feedback about being too game-like or too formal.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-challenges" target="_blank" rel="noopener noreferrer">Portfolio Feedback & Refinement:</a></strong> Showed early versions to friends and classmates, received feedback about professionalism balance, and adjusted the design to find the right sweet spot.</li>
             </ul>
           </div>
         </ParallaxSection>
@@ -184,12 +187,12 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             </div>
             <h3>EVIDENCE</h3>
             <ul>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('overview')}>Structured Project Approach:</button></strong> Followed a clear process for the Ducks on Fire project: research → inspiration gathering → design iterations → user testing → final implementation.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('team-collaboration')}>Team Charter Creation:</button></strong> Created a team charter at the start of the project that set clear rules and expectations for how the team would work together.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('research')}>Applied Research:</button></strong> Conducted research into creative agencies to understand industry standards and inform design decisions.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('team-collaboration')}>Team Collaboration:</button></strong> Worked with teammates who created the brand guide and incorporated their work into the website design.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-overview', 'portfolio')}>Portfolio Project Methodology:</button></strong> Followed a structured approach for the portfolio project: research other portfolios → identify unique angle → design iterations → development → optimization for different devices.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-challenges', 'portfolio')}>Responsive Design Considerations:</button></strong> Ensured the portfolio works on different devices by simplifying animations for mobile and creating responsive layouts, considering accessibility and user experience across platforms.</li>
+              <li><strong><a className="evidence-link" href="/projects#overview" target="_blank" rel="noopener noreferrer">Structured Project Approach:</a></strong> Followed a clear process for the Ducks on Fire project: research → inspiration gathering → design iterations → user testing → final implementation.</li>
+              <li><strong><a className="evidence-link" href="/projects#team-collaboration" target="_blank" rel="noopener noreferrer">Team Charter Creation:</a></strong> Created a team charter at the start of the project that set clear rules and expectations for how the team would work together.</li>
+              <li><strong><a className="evidence-link" href="/projects#research" target="_blank" rel="noopener noreferrer">Applied Research:</a></strong> Conducted research into creative agencies to understand industry standards and inform design decisions.</li>
+              <li><strong><a className="evidence-link" href="/projects#team-collaboration" target="_blank" rel="noopener noreferrer">Team Collaboration:</a></strong> Worked with teammates who created the brand guide and incorporated their work into the website design.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-overview" target="_blank" rel="noopener noreferrer">Portfolio Project Methodology:</a></strong> Followed a structured approach for the portfolio project: research other portfolios → identify unique angle → design iterations → development → optimization for different devices.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-challenges" target="_blank" rel="noopener noreferrer">Responsive Design Considerations:</a></strong> Ensured the portfolio works on different devices by simplifying animations for mobile and creating responsive layouts, considering accessibility and user experience across platforms.</li>
             </ul>
           </div>
         </ParallaxSection>
@@ -209,24 +212,27 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
                 <li>Learning from my mistakes (like the PhotoModeler thing)</li>
                 <li>Teaching myself new stuff like React and GSAP</li>
                 <li>Taking responsibility for parts of team projects</li>
+                <li>Identified my career path: UX/UI design, front-end development, and mobile app development</li>
+                <li>Actively exploring technologies relevant to my future goals</li>
               </ul>
               <h4>What I Need to Work On:</h4>
               <ul>
-                <li>Think more about where I want to go with my career</li>
+                <li>Gain more experience in mobile app development to prepare for my specialization</li>
+                <li>Build a stronger portfolio specifically showcasing UX/UI work</li>
                 <li>Help other students learn stuff I know</li>
                 <li>Take more leadership in projects, not just do tasks</li>
               </ul>
             </div>
             <h3>EVIDENCE</h3>
             <ul>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('overview')}>Taking Initiative:</button></strong> Took responsibility for the website research, design, and development part of the Ducks on Fire project while teammates focused on branding.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('development')}>Self-Directed Learning:</button></strong> Learned new techniques and approaches for web development and design implementation during the project.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('user-testing')}>Seeking Feedback:</button></strong> Asked teammates, classmates, and friends for feedback on design iterations and used their input to improve the work.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('development')}>Problem Solving:</button></strong> Worked through technical challenges during development and found solutions independently.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('3d-modeling')}>Learning from Failures:</button></strong> Experimented with PhotoModeler for 3D modeling, recognized when the results were disappointing, and learned from comparing it with teammates' more successful approaches using different software.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-overview', 'portfolio')}>Portfolio as Personal Expression:</button></strong> Created a unique Wii-themed portfolio that reflects my personality and interests, choosing an external website format to showcase both design and technical skills.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-results', 'portfolio')}>Critical Self-Reflection:</button></strong> Learned to balance creativity with usability, being critical of my own work and cutting features that didn't serve the end goal even after spending hours on them.</li>
-              <li><strong><button className="evidence-link" onClick={() => handleEvidenceClick('portfolio-development', 'portfolio')}>Technical Problem Solving:</button></strong> Worked through complex challenges like page transitions, dot grid physics, and performance optimization, finding solutions through trial and error and learning new technologies (React, GSAP).</li>
+              <li><strong><a className="evidence-link" href="/projects#overview" target="_blank" rel="noopener noreferrer">Taking Initiative:</a></strong> Took responsibility for the website research, design, and development part of the Ducks on Fire project while teammates focused on branding.</li>
+              <li><strong><a className="evidence-link" href="/projects#development" target="_blank" rel="noopener noreferrer">Self-Directed Learning:</a></strong> Learned new techniques and approaches for web development and design implementation during the project.</li>
+              <li><strong><a className="evidence-link" href="/projects#user-testing" target="_blank" rel="noopener noreferrer">Seeking Feedback:</a></strong> Asked teammates, classmates, and friends for feedback on design iterations and used their input to improve the work.</li>
+              <li><strong><a className="evidence-link" href="/projects#development" target="_blank" rel="noopener noreferrer">Problem Solving:</a></strong> Worked through technical challenges during development and found solutions independently.</li>
+              <li><strong><a className="evidence-link" href="/projects#3d-modeling" target="_blank" rel="noopener noreferrer">Learning from Failures:</a></strong> Experimented with PhotoModeler for 3D modeling, recognized when the results were disappointing, and learned from comparing it with teammates' more successful approaches using different software.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-overview" target="_blank" rel="noopener noreferrer">Portfolio as Personal Expression:</a></strong> Created a unique Wii-themed portfolio that reflects my personality and interests, choosing an external website format to showcase both design and technical skills.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-results" target="_blank" rel="noopener noreferrer">Critical Self-Reflection:</a></strong> Learned to balance creativity with usability, being critical of my own work and cutting features that didn't serve the end goal even after spending hours on them.</li>
+              <li><strong><a className="evidence-link" href="/projects#portfolio-development" target="_blank" rel="noopener noreferrer">Technical Problem Solving:</a></strong> Worked through complex challenges like page transitions, dot grid physics, and performance optimization, finding solutions through trial and error and learning new technologies (React, GSAP).</li>
             </ul>
           </div>
         </ParallaxSection>
@@ -238,13 +244,22 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <p>What went well was my ability to stay organized and break down big tasks into smaller, manageable pieces. I also got better at asking for feedback and actually using it to improve my work.</p>
             <p>What could be better is my time management, sometimes I spend too much time perfecting small details instead of focusing on the bigger picture first. I also want to get better at explaining my design decisions to others.</p>
             <h3>NEXT STEPS</h3>
-            <p>For the rest of the semester, I want to focus on:</p>
+            <h4>Short-term (This Semester):</h4>
             <ul>
               <li>Improving my project planning and time management skills</li>
               <li>Getting better at presenting and explaining my work to others</li>
               <li>Expanding my knowledge of professional tools like Photoshop, Illustrator and Unreal Engine</li>
             </ul>
-            <p>I want to continue being curious and trying new approaches, but also become more efficient in my workflow. My goal is to become someone who can handle complex projects independently while also being a valuable team member.</p>
+            <h4>Long-term (Future Career Direction):</h4>
+            <p>I've identified my learning trajectory and professional direction: <strong>UX/UI design, front-end development, and mobile app development</strong>. To actively work towards this, I'm taking these concrete steps:</p>
+            <ul>
+              <li><strong>Next Semester:</strong> Choosing the mobile app development specialization to gain hands-on experience with iOS/Android development</li>
+              <li><strong>Portfolio Development:</strong> Building more UX/UI focused projects that demonstrate user research, wireframing, and interaction design skills</li>
+              <li><strong>Technical Skills:</strong> Learning React Native or Flutter for cross-platform mobile development</li>
+              <li><strong>Design Skills:</strong> Deepening my knowledge of design systems, accessibility standards, and advanced prototyping in Figma</li>
+              <li><strong>Professional Growth:</strong> Seeking internships or freelance opportunities in UX/UI design and front-end development</li>
+            </ul>
+            <p>I want to continue being curious and trying new approaches in these areas, but also become more efficient in my workflow. My goal is to become a designer-developer who can handle complex projects independently while also being a valuable team member - someone who bridges the gap between design and development.</p>
           </div>
         </ParallaxSection>
       </ParallaxScroll>

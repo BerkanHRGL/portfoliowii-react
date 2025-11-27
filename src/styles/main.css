@@ -198,17 +198,13 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
     position: relative;
     cursor: url('cursor/link select.cur'), pointer;
     transition: all 0.3s ease;
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.1),
-        0 2px 5px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    border: none;
 }
 
 .channel-card:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.15),
-        0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
 }
 
 .channel-card:active {
@@ -230,8 +226,9 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 .channel-text {
     font-size: 18px;
     color: #333;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 0;
+    letter-spacing: -0.01em;
 }
 
 .channel-subtitle {
@@ -240,7 +237,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
     font-weight: 400;
     margin-top: 5px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
 }
 
 .channel-card.projects .channel-subtitle,
@@ -296,7 +293,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.projects .channel-text {
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .channel-card.learning {
@@ -305,7 +302,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.learning .channel-text {
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .channel-card.reading {
@@ -314,7 +311,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.reading .channel-text {
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .channel-card.about {
@@ -323,7 +320,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.about .channel-text {
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .channel-card.contact {
@@ -332,7 +329,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.contact .channel-text {
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .channel-card.skills {
@@ -341,7 +338,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.skills .channel-text {
     color: #333;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .channel-card.experience {
@@ -350,7 +347,7 @@ a, button, .channel-card, [role="button"], input[type="submit"], input[type="but
 
 .channel-card.experience .channel-text {
     color: #333;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Bottom profile section */

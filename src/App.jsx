@@ -1,20 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WarningScreen from './components/WarningScreen';
 import WiiMenu from './components/WiiMenu';
 import Projects from './pages/Projects';
+import ProjectsApple from './pages/ProjectsApple';
 import ReadingGuide from './pages/ReadingGuide';
 import AboutMe from './pages/AboutMe';
 import PageTransition from './components/PageTransition/PageTransition';
 import './styles/main.css';
 
 function App() {
-  const [showWarning, setShowWarning] = useState(true);
+  // Check if warning was already dismissed or if coming from anchor link
+  const hasSeenWarning = localStorage.getItem('warningDismissed') === 'true';
+  const hasAnchor = window.location.hash.length > 0;
+
+  const [showWarning, setShowWarning] = useState(!hasSeenWarning && !hasAnchor);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [clickPosition, setClickPosition] = useState(null);
 
   const handleWarningDismiss = () => {
     setShowWarning(false);
+    localStorage.setItem('warningDismissed', 'true');
   };
 
   const handleTransitionComplete = () => {
@@ -35,6 +41,7 @@ function App() {
       <Routes>
         <Route path="/" element={<WiiMenu setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/projects" element={<Projects setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
+        <Route path="/projects-apple" element={<ProjectsApple setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/reading-guide" element={<ReadingGuide setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/about-me" element={<AboutMe setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
       </Routes>
