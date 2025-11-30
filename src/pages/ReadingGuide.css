@@ -1,431 +1,408 @@
+/* Override root overflow for this page */
+body:has(.reading-guide-view) #root {
+  height: auto;
+  overflow: visible;
+}
+
 .reading-guide-view {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
-  background: #e8e8e8;
-  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0);
-  background-size: 20px 20px;
+  background: #fcfcfc;
+  color: #1d1d1f;
+  overflow-x: hidden;
 }
 
-.reading-guide-section {
-  padding: 2rem;
-}
-
-.reading-guide-section h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 2rem;
-}
-
-.reading-guide-section h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-.intro {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.info-row {
+/* Import Apple styles from ProjectsApple.css */
+.reading-guide-view .apple-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 280px;
+  padding: 120px 80px 200px;
+}
+
+/* Hero Section */
+.reading-guide-view .apple-hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
-.portfolio-format {
-  flex: 1;
-}
-
-.semester-section {
-  padding: 1.5rem 2rem;
-  background: rgba(102, 126, 234, 0.1);
-  border-radius: 12px;
-  text-align: center;
-}
-
-.semester-section h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #667eea;
-  margin: 0;
-}
-
-.portfolio-format h2 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-.portfolio-format ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.portfolio-format li {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.portfolio-format li:before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  color: #667eea;
-  font-weight: bold;
-}
-
-.learning-outcome {
-  padding: 2rem;
-}
-
-.learning-outcome.reflection {
-  padding: 2rem;
-}
-
-.learning-outcome h2 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-.learning-outcome h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #667eea;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 1.5rem 0 1rem 0;
-}
-
-.learning-outcome p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-  margin: 1rem 0;
-}
-
-.learning-outcome ul {
-  padding-left: 1.5rem;
-  margin: 1rem 0;
-}
-
-.learning-outcome li {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-  margin: 0.75rem 0;
-}
-
-.evidence-link {
-  background: none;
-  border: none;
-  color: #667eea;
-  text-decoration: underline;
-  cursor: url('/cursor/link select.cur'), pointer;
-  font-size: inherit;
-  font-family: inherit;
+  justify-content: flex-start;
+  text-align: left;
   padding: 0;
-  transition: color 0.2s ease;
+  background: transparent;
+  gap: 48px;
 }
 
-.evidence-link:hover {
-  color: #764ba2;
+.reading-guide-view .apple-hero-title {
+  font-size: clamp(80px, 12vw, 160px);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #1d1d1f;
 }
 
-.improvement-section {
-  background: rgba(102, 126, 234, 0.05);
-  border-left: 4px solid #667eea;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
+.reading-guide-view .apple-hero-description {
+  font-size: clamp(16px, 1.5vw, 20px);
+  max-width: 500px;
+  line-height: 1.7;
+  color: #666;
+  font-weight: 400;
 }
 
-.improvement-section h4 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #667eea;
-  margin: 1rem 0 0.75rem 0;
+/* Section Styles */
+.reading-guide-view .apple-section {
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  color: #1d1d1f;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
-.improvement-section h4:first-child {
+.reading-guide-view .apple-section.apple-dark {
+  background: #161719;
+  color: #fcfcfc;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 120px 0;
+}
+
+.reading-guide-view .apple-section.apple-dark .apple-section-text,
+.reading-guide-view .apple-section.apple-dark .apple-evidence-text {
+  color: #fcfcfc;
+  opacity: 0.7;
+}
+
+.reading-guide-view .apple-section.apple-dark .apple-section-title,
+.reading-guide-view .apple-section.apple-dark .apple-subsection-title,
+.reading-guide-view .apple-section.apple-dark .apple-card-title,
+.reading-guide-view .apple-section.apple-dark .apple-evidence-title {
+  color: #fcfcfc;
+}
+
+.reading-guide-view .apple-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+}
+
+.reading-guide-view .apple-section.apple-dark .apple-container {
+  padding: 0 80px;
+}
+
+/* Typography */
+.reading-guide-view .apple-section-title {
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  margin: 0 0 60px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.reading-guide-view .apple-section-text {
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.8;
+  margin: 0 0 24px 0;
+  color: inherit;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.reading-guide-view .apple-subsection-title {
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 400;
+  margin: 80px 0 24px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.reading-guide-view .apple-subsection-title:first-of-type {
   margin-top: 0;
 }
 
-.improvement-section ul {
-  margin: 0.5rem 0 1rem 0;
-  padding-left: 1.5rem;
+.reading-guide-view .apple-section-text + .apple-subsection-title {
+  margin-top: 120px;
 }
 
-.improvement-section li {
-  font-size: 15px;
+/* Grid Layouts */
+.reading-guide-view .apple-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 60px;
+  margin: 60px 0 0 0;
+}
+
+.reading-guide-view .apple-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  transition: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reading-guide-view .apple-grid-2[data-animate="true"] .apple-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reading-guide-view .apple-grid-2.animate-in .apple-card {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.reading-guide-view .apple-grid-2.animate-in .apple-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.reading-guide-view .apple-grid-2.animate-in .apple-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.reading-guide-view .apple-grid-2.animate-in .apple-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.reading-guide-view .apple-grid-2.animate-in .apple-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reading-guide-view .apple-card-title {
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 400;
+  margin: 0;
+  color: inherit;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.reading-guide-view .apple-card-text {
+  font-size: clamp(15px, 1.4vw, 18px);
   line-height: 1.7;
-  color: #444;
-  margin: 0.5rem 0;
+  color: inherit;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Split Layout */
+.reading-guide-view .apple-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  align-items: flex-start;
+  margin: 60px 0 0 0;
+}
+
+.reading-guide-view .apple-split[data-animate="true"] > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reading-guide-view .apple-split.animate-in > * {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.reading-guide-view .apple-split.animate-in > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.reading-guide-view .apple-split.animate-in > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.reading-guide-view .apple-split-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Evidence List */
+.reading-guide-view .apple-evidence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: 40px 0 0 0;
+}
+
+.reading-guide-view .apple-evidence-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+  padding-bottom: 48px;
+}
+
+.reading-guide-view .apple-section.apple-dark .apple-evidence-item {
+  border-bottom: 1px solid rgba(252, 252, 252, 0.1);
+}
+
+.reading-guide-view .apple-evidence-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reading-guide-view .apple-evidence-title {
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 400;
+  margin: 0;
+  color: inherit;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.reading-guide-view .apple-evidence-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.reading-guide-view .apple-evidence-title a:hover {
+  opacity: 0.6;
+}
+
+.reading-guide-view .apple-evidence-text {
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.7;
+  color: inherit;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Back Button Override */
+.reading-guide-view .back-button {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  color: #1d1d1f;
+  border-radius: 0;
+  padding: 0;
+  cursor: url('/cursor/link select.cur'), pointer;
+  font-size: 16px;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+  box-shadow: none;
+  border-bottom: 1px solid #1d1d1f;
+  padding-bottom: 2px;
+}
+
+.reading-guide-view .back-button:hover {
+  background: transparent;
+  border-color: #1d1d1f;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* Social Icons Override */
+.reading-guide-view .social-icons {
+  position: fixed;
+  z-index: 999;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
-  .reading-guide-section h1 {
-    font-size: 40px;
+  .reading-guide-view .apple-content {
+    gap: 220px;
+    padding: 100px 40px 150px;
   }
 
-  .reading-guide-section h2 {
-    font-size: 22px;
+  .reading-guide-view .apple-section {
+    gap: 60px;
   }
 
-  .intro {
-    font-size: 17px;
+  .reading-guide-view .apple-section.apple-dark {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 100px 0;
   }
 
-  .learning-outcome h2 {
-    font-size: 18px;
+  .reading-guide-view .apple-section.apple-dark .apple-container {
+    padding: 0 40px;
   }
 
-  .learning-outcome h3 {
-    font-size: 15px;
+  .reading-guide-view .apple-split {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 
-  .learning-outcome p {
-    font-size: 15px;
-  }
-
-  .learning-outcome li {
-    font-size: 15px;
+  .reading-guide-view .apple-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }
 
 @media (max-width: 768px) {
-  .reading-guide-view {
-    background-size: 15px 15px;
+  .reading-guide-view .apple-content {
+    gap: 180px;
+    padding: 80px 24px 120px;
   }
 
-  .reading-guide-section {
-    padding: 1.5rem;
+  .reading-guide-view .apple-section {
+    gap: 48px;
   }
 
-  .reading-guide-section h1 {
-    font-size: 36px;
-    margin-bottom: 1.5rem;
+  .reading-guide-view .apple-section.apple-dark {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 80px 0;
   }
 
-  .reading-guide-section h2 {
-    font-size: 20px;
-    margin-bottom: 0.8rem;
+  .reading-guide-view .apple-section.apple-dark .apple-container {
+    padding: 0 24px;
   }
 
-  .intro {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+  .reading-guide-view .apple-hero {
+    padding: 0;
+    min-height: 50vh;
+    gap: 40px;
   }
 
-  .info-row {
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 1.5rem;
+  .reading-guide-view .apple-section-title {
+    margin-bottom: 40px;
   }
 
-  .semester-section {
-    padding: 1.2rem 1.5rem;
+  .reading-guide-view .apple-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 
-  .semester-section h3 {
-    font-size: 18px;
+  .reading-guide-view .apple-split {
+    gap: 48px;
   }
 
-  .portfolio-format h2 {
-    font-size: 18px;
+  .reading-guide-view .back-button {
+    top: 24px;
+    left: 24px;
   }
 
-  .portfolio-format li {
-    font-size: 15px;
-    line-height: 1.7;
+  .reading-guide-view .apple-evidence-list {
+    gap: 40px;
   }
 
-  .learning-outcome {
-    padding: 1.5rem;
-  }
-
-  .learning-outcome.reflection {
-    padding: 1.5rem;
-  }
-
-  .learning-outcome h2 {
-    font-size: 18px;
-    margin-bottom: 0.8rem;
-  }
-
-  .learning-outcome h3 {
-    font-size: 15px;
-    margin: 1.2rem 0 0.8rem 0;
-  }
-
-  .learning-outcome p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0.8rem 0;
-  }
-
-  .learning-outcome ul {
-    padding-left: 1.2rem;
-    margin: 0.8rem 0;
-  }
-
-  .learning-outcome li {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0.6rem 0;
-  }
-
-  .evidence-link {
-    font-size: 15px;
-  }
-
-  .improvement-section {
-    padding: 1.2rem;
-    margin: 1.2rem 0;
-  }
-
-  .improvement-section h4 {
-    font-size: 15px;
-    margin: 0.8rem 0 0.6rem 0;
-  }
-
-  .improvement-section ul {
-    margin: 0.4rem 0 0.8rem 0;
-    padding-left: 1.2rem;
-  }
-
-  .improvement-section li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0.4rem 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .reading-guide-view {
-    background-size: 12px 12px;
-  }
-
-  .reading-guide-section {
-    padding: 1rem;
-  }
-
-  .reading-guide-section h1 {
-    font-size: 28px;
-    margin-bottom: 1.2rem;
-    letter-spacing: 1px;
-  }
-
-  .reading-guide-section h2 {
-    font-size: 18px;
-    margin-bottom: 0.7rem;
-  }
-
-  .intro {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-  }
-
-  .info-row {
-    gap: 1.5rem;
-    margin-top: 1.2rem;
-  }
-
-  .semester-section {
-    padding: 1rem 1.2rem;
-  }
-
-  .semester-section h3 {
-    font-size: 16px;
-  }
-
-  .portfolio-format h2 {
-    font-size: 16px;
-  }
-
-  .portfolio-format li {
-    font-size: 14px;
-    line-height: 1.6;
-    padding: 0.4rem 0;
-    padding-left: 1.2rem;
-  }
-
-  .learning-outcome {
-    padding: 1.2rem;
-  }
-
-  .learning-outcome.reflection {
-    padding: 1.2rem;
-  }
-
-  .learning-outcome h2 {
-    font-size: 16px;
-    margin-bottom: 0.7rem;
-  }
-
-  .learning-outcome h3 {
-    font-size: 14px;
-    margin: 1rem 0 0.6rem 0;
-    letter-spacing: 0.3px;
-  }
-
-  .learning-outcome p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0.7rem 0;
-  }
-
-  .learning-outcome ul {
-    padding-left: 1rem;
-    margin: 0.7rem 0;
-  }
-
-  .learning-outcome li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0.5rem 0;
-  }
-
-  .evidence-link {
-    font-size: 14px;
-  }
-
-  .improvement-section {
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 6px;
-  }
-
-  .improvement-section h4 {
-    font-size: 14px;
-    margin: 0.7rem 0 0.5rem 0;
-  }
-
-  .improvement-section ul {
-    margin: 0.3rem 0 0.7rem 0;
-    padding-left: 1rem;
-  }
-
-  .improvement-section li {
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 0.35rem 0;
+  .reading-guide-view .apple-evidence-item {
+    padding-bottom: 40px;
   }
 }

@@ -131,30 +131,10 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
         </div>
       </ParallaxSection>
 
-      {/* Design Methodology */}
-      <ParallaxSection sectionClassName="project-section" id="methodology">
-        <div className="stack-card-content">
-          <h2 className="section-title">DESIGN METHODOLOGY</h2>
-          <p>
-            I followed an iterative design process based on the <strong>DOT Framework</strong>. This helped me work through the project systematically from research to final product.
-          </p>
-          <div className="process-steps">
-            <p><strong>1. WHAT?</strong> - Research (Best, Good & Bad Analysis + Library Research)</p>
-            <p><strong>2. WHY?</strong> - Define requirements based on insights</p>
-            <p><strong>3. HOW?</strong> - Design & develop (Prototyping + Version Control)</p>
-            <p><strong>4. WHAT IF?</strong> - Test & iterate (Usability Testing + Peer Review)</p>
-          </div>
-          <p>
-            Each iteration built on feedback from the previous one, creating a cycle of continuous improvement.
-          </p>
-        </div>
-      </ParallaxSection>
-
       {/* Research Process */}
       <ParallaxSection sectionClassName="project-section" id="research">
         <div className="stack-card-content">
           <h2 className="section-title">RESEARCH PROCESS</h2>
-          <div className="methodology-badge">DOT Framework: WHAT? (Discovery Phase)</div>
           <h3>Best, Good & Bad Analysis (CMD Method)</h3>
           <p>
             I analyzed about 6 different agency websites and categorized them into what worked really well, what was okay, and what didn't work at all. The best examples had clear service descriptions, easy-to-find contact info, and balanced portfolios. The bad ones were confusing with messy navigation.
@@ -171,7 +151,6 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
       <ParallaxSection sectionClassName="project-section" id="design-process">
         <div className="stack-card-content">
           <h2 className="section-title">DESIGN PROCESS</h2>
-          <div className="methodology-badge">DOT Framework: HOW? (Development Phase) + WHAT IF? (Testing Phase)</div>
           <p>
             I created multiple design iterations in Figma, using <strong>Prototyping</strong> and <strong>Peer Review</strong>. Each version was tested and improved based on feedback.
           </p>
@@ -201,7 +180,6 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
       <ParallaxSection sectionClassName="project-section" id="user-testing">
         <div className="stack-card-content">
           <h2 className="section-title">👥 USER TESTING & FEEDBACK</h2>
-          <div className="methodology-badge">DOT Framework: WHAT IF? (Testing & Validation)</div>
           <p>
             I conducted multiple rounds of <strong>Usability Testing</strong> with teammates, classmates, and friends. Each round revealed specific issues that I fixed in the next iteration.
           </p>
@@ -258,7 +236,7 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
           </button>
           <h3>Design Version Control & Collaboration</h3>
           <p>
-            While I used GitHub for tracking my code, my teammates worked on the brand guide in Figma, which basically does the same thing for design work. It's how design teams actually handle version control in the industry, similar to how developers use Git.
+            While I used GitHub for tracking my code, we also worked on the brand guide in Figma, which basically does the same thing for design work. It's how design teams actually handle version control in the industry, similar to how developers use Git.
           </p>
           <p>
             The cool thing about Figma is that we all worked together in one file. Multiple people could be editing at the same time, leaving comments, making changes, and seeing what everyone else was doing. It's like Google Docs but for design. Figma automatically saves every version of the file, so we could always go back and see how the brand guide looked last week or compare different versions of the logo.
@@ -383,27 +361,10 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
         </div>
       </ParallaxSection>
 
-      {/* Design Methodology */}
-      <ParallaxSection sectionClassName="project-section" id="portfolio-methodology">
-        <div className="stack-card-content">
-          <h2 className="section-title">DESIGN METHODOLOGY</h2>
-          <p>
-            I followed an iterative design process based on the <strong>DOT Framework</strong> for this personal project.
-          </p>
-          <div className="process-steps">
-            <p><strong>1. WHAT?</strong> - Research (Library Research on Wii UI)</p>
-            <p><strong>2. WHY?</strong> - Define goal: memorable portfolio balancing creativity & professionalism</p>
-            <p><strong>3. HOW?</strong> - Design & develop (Prototyping + Version Control)</p>
-            <p><strong>4. WHAT IF?</strong> - Test & iterate (Peer Review)</p>
-          </div>
-        </div>
-      </ParallaxSection>
-
       {/* Research & Inspiration */}
       <ParallaxSection sectionClassName="project-section" id="portfolio-research">
         <div className="stack-card-content">
           <h2 className="section-title">RESEARCH & INSPIRATION</h2>
-          <div className="methodology-badge">DOT Framework: WHAT? (Discovery Phase)</div>
           <h3>Inspiration (Library Research)</h3>
           <p>
             I've always loved the Nintendo Wii's menu system. It's simple, playful, and just feels good to use. The way the channels bounce and move around, the clean design, the interactive elements, it all felt perfect for what I wanted to create.
@@ -419,7 +380,6 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
       <ParallaxSection sectionClassName="project-section" id="portfolio-design">
         <div className="stack-card-content">
           <h2 className="section-title">DESIGN PROCESS</h2>
-          <div className="methodology-badge">DOT Framework: HOW? (Development Phase) + WHAT IF? (Testing Phase)</div>
           <h3>Concepts (Prototyping)</h3>
           <p>
             I started sketching out ideas in Figma, trying different layouts and seeing how I could adapt the Wii aesthetic to work as a portfolio. The biggest challenge was making it feel nostalgic and fun while still being professional.
@@ -442,7 +402,6 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
       <ParallaxSection sectionClassName="project-section" id="portfolio-development">
         <div className="stack-card-content">
           <h2 className="section-title">DEVELOPMENT</h2>
-          <div className="methodology-badge">DOT Framework: HOW? (Development Phase)</div>
           <p>
             Building this portfolio was definitely the most fun part. I got to bring all my design ideas to life and make everything actually work. I used React because it makes it easy to organize everything into components and manage all the interactive parts.
           </p>
@@ -464,7 +423,6 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
       <ParallaxSection sectionClassName="project-section" id="portfolio-challenges">
         <div className="stack-card-content">
           <h2 className="section-title">ITERATIONS & FEEDBACK</h2>
-          <div className="methodology-badge">DOT Framework: WHAT IF? (Testing & Validation)</div>
           <h3>Balancing Creativity & Professionalism (Peer Review)</h3>
           <p>
             The biggest challenge was making sure the playful Wii theme didn't make my portfolio look unprofessional or childish. I showed early versions to friends and classmates to get feedback. Some said it was too game-like, others said it wasn't playful enough. Finding that sweet spot took a lot of adjustments and fine-tuning.

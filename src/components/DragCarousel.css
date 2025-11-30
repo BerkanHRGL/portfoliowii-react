@@ -1,0 +1,83 @@
+.drag-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.drag-carousel-container {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  cursor: grab;
+  padding: 20px 0;
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.drag-carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.drag-carousel-container.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.drag-carousel-slide {
+  flex: 0 0 auto;
+  width: auto;
+  height: 80vh;
+  border-radius: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.drag-carousel-image {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+.drag-carousel-progress-container {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.drag-carousel-progress-bar {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: width 0.1s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .drag-carousel-slide {
+    height: 60vh;
+  }
+
+  .drag-carousel-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .drag-carousel-slide {
+    height: 50vh;
+  }
+
+  .drag-carousel-container {
+    gap: 15px;
+  }
+}
