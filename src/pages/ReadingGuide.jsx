@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './ReadingGuide.css';
 
 const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
   const navigate = useNavigate();
+  const [isOverDarkSection, setIsOverDarkSection] = useState(false);
 
   const handleBackToMenu = (event) => {
     setClickPosition({ x: event.clientX, y: event.clientY });
@@ -42,9 +43,51 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
     };
   }, []);
 
+  // Detect when back button is over dark sections
+  useEffect(() => {
+    const checkDarkSection = () => {
+      const backButton = document.querySelector('.back-button');
+
+      if (!backButton) return;
+
+      const backButtonRect = backButton.getBoundingClientRect();
+
+      // Check all dark sections
+      const darkSections = document.querySelectorAll('.apple-section.apple-dark');
+      let isOverDark = false;
+
+      darkSections.forEach((section) => {
+        const sectionRect = section.getBoundingClientRect();
+
+        // Check if button overlaps with dark section
+        const backButtonOverlaps =
+          backButtonRect.top < sectionRect.bottom &&
+          backButtonRect.bottom > sectionRect.top;
+
+        if (backButtonOverlaps) {
+          isOverDark = true;
+        }
+      });
+
+      setIsOverDarkSection(isOverDark);
+    };
+
+    // Check on scroll
+    window.addEventListener('scroll', checkDarkSection);
+    // Check initially
+    checkDarkSection();
+
+    return () => {
+      window.removeEventListener('scroll', checkDarkSection);
+    };
+  }, []);
+
   return (
     <div className="reading-guide-view">
-      <button className="back-button" onClick={handleBackToMenu}>
+      <button
+        className={`back-button ${isOverDarkSection ? 'over-dark' : ''}`}
+        onClick={handleBackToMenu}
+      >
         ← Back to Menu
       </button>
 

@@ -6,6 +6,7 @@ import DragCarousel from '../components/DragCarousel';
 const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
   const navigate = useNavigate();
   const [activeProject, setActiveProject] = useState('ducks-on-fire');
+  const [isOverDarkSection, setIsOverDarkSection] = useState(false);
 
   // Refs for all animated sections
   const animatedSectionsRef = useRef([]);
@@ -128,6 +129,51 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
       sections.forEach((section) => {
         observer.unobserve(section);
       });
+    };
+  }, [activeProject]);
+
+  // Detect when navbar/back button are over dark sections
+  useEffect(() => {
+    const checkDarkSection = () => {
+      const backButton = document.querySelector('.back-button');
+      const navbar = document.querySelector('.apple-project-tabs');
+
+      if (!backButton || !navbar) return;
+
+      const backButtonRect = backButton.getBoundingClientRect();
+      const navbarRect = navbar.getBoundingClientRect();
+
+      // Check all dark sections
+      const darkSections = document.querySelectorAll('.apple-section.apple-dark');
+      let isOverDark = false;
+
+      darkSections.forEach((section) => {
+        const sectionRect = section.getBoundingClientRect();
+
+        // Check if either button overlaps with dark section
+        const backButtonOverlaps =
+          backButtonRect.top < sectionRect.bottom &&
+          backButtonRect.bottom > sectionRect.top;
+
+        const navbarOverlaps =
+          navbarRect.top < sectionRect.bottom &&
+          navbarRect.bottom > sectionRect.top;
+
+        if (backButtonOverlaps || navbarOverlaps) {
+          isOverDark = true;
+        }
+      });
+
+      setIsOverDarkSection(isOverDark);
+    };
+
+    // Check on scroll
+    window.addEventListener('scroll', checkDarkSection);
+    // Check initially and when project changes
+    checkDarkSection();
+
+    return () => {
+      window.removeEventListener('scroll', checkDarkSection);
     };
   }, [activeProject]);
 
@@ -684,11 +730,14 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
 
   return (
     <div className="projects-apple-view">
-      <button className="back-button" onClick={handleBackToMenu}>
+      <button
+        className={`back-button ${isOverDarkSection ? 'over-dark' : ''}`}
+        onClick={handleBackToMenu}
+      >
         ← Back to Menu
       </button>
 
-      <div className="apple-project-tabs">
+      <div className={`apple-project-tabs ${isOverDarkSection ? 'over-dark' : ''}`}>
         <button
           className={`apple-tab ${activeProject === 'ducks-on-fire' ? 'active' : ''}`}
           onClick={() => setActiveProject('ducks-on-fire')}

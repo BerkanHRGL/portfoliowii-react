@@ -302,7 +302,7 @@ body:has(.reading-guide-view) #root {
   cursor: url('/cursor/link select.cur'), pointer;
   font-size: 16px;
   font-weight: 400;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
   box-shadow: none;
   border-bottom: 1px solid #1d1d1f;
   padding-bottom: 2px;
@@ -314,6 +314,15 @@ body:has(.reading-guide-view) #root {
   transform: none;
   box-shadow: none;
   opacity: 0.6;
+}
+
+.reading-guide-view .back-button.over-dark {
+  color: #fcfcfc;
+  border-bottom-color: #fcfcfc;
+}
+
+.reading-guide-view .back-button.over-dark:hover {
+  border-color: #fcfcfc;
 }
 
 /* Social Icons Override */
