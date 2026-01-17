@@ -7,6 +7,38 @@ import gsap from 'gsap';
 import './TVIntro.css';
 import roomModel from '../assets/tv_room.glb?url';
 
+useGLTF.preload(roomModel);
+
+// Typewriter component
+function Typewriter({ text, speed = 50, delay = 0, onComplete }) {
+  const [displayedText, setDisplayedText] = useState('');
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    if (!text) return;
+
+    const startTimeout = setTimeout(() => {
+      let currentIndex = 0;
+      const interval = setInterval(() => {
+        if (currentIndex <= text.length) {
+          setDisplayedText(text.slice(0, currentIndex));
+          currentIndex++;
+        } else {
+          clearInterval(interval);
+          setIsComplete(true);
+          if (onComplete) onComplete();
+        }
+      }, speed);
+
+      return () => clearInterval(interval);
+    }, delay);
+
+    return () => clearTimeout(startTimeout);
+  }, [text, speed, delay, onComplete]);
+
+  return <>{displayedText}{!isComplete && <span className="cursor">|</span>}</>;
+}
+
 function LivingRoomModel({ onClick }) {
   const gltf = useGLTF(roomModel);
   const screenTexture = useTexture('/imgs/homepage.png');
@@ -87,14 +119,7 @@ function LivingRoomModel({ onClick }) {
   );
 }
 
-function LoadingBox() {
-  return (
-    <mesh>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="hotpink" />
-    </mesh>
-  );
-}
+
 
 function CameraController({ isZooming, onTransitionComplete }) {
   const { camera, scene } = useThree();
@@ -192,6 +217,9 @@ function TVIntro({ setIsTransitioning }) {
   const navigate = useNavigate();
   const [isZooming, setIsZooming] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [modelLoaded, setModelLoaded] = useState(false);
+  const [showSubtitle, setShowSubtitle] = useState(false);
+  const [titleComplete, setTitleComplete] = useState(false);
   const overlayRef = useRef();
 
   const handleTVClick = (event) => {
@@ -210,6 +238,15 @@ function TVIntro({ setIsTransitioning }) {
   const handleTransitionComplete = () => {
     navigate('/menu');
   };
+
+  // Set model loaded after Suspense resolves
+  useEffect(() => {
+    // Small delay to ensure model is fully rendered
+    const timer = setTimeout(() => {
+      setModelLoaded(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (hasError) {
     return (
@@ -250,17 +287,36 @@ function TVIntro({ setIsTransitioning }) {
         <directionalLight position={[-5, 5, -5]} intensity={1.5} />
         <pointLight position={[0, 2, 0]} intensity={1} />
 
-        <Suspense fallback={<LoadingBox />}>
+        <Suspense fallback={null}>
           <LivingRoomModel onClick={handleTVClick} />
         </Suspense>
 
         <CameraController isZooming={isZooming} onTransitionComplete={handleTransitionComplete} />
       </Canvas>
 
-      <div className={`intro-text ${isZooming ? 'fade-out' : ''}`}>
-        <h1 className="intro-title">Welcome</h1>
-        <p className="intro-subtitle">Click on the TV to enter</p>
-      </div>
+      {modelLoaded && (
+        <div className={`intro-text ${isZooming ? 'fade-out' : ''}`}>
+          <h1 className="intro-title">
+            {titleComplete ? (
+              "Hey! Welcome to my portfolio"
+            ) : (
+              <Typewriter
+                text="Hey! Welcome to my portfolio"
+                speed={70}
+                onComplete={() => {
+                  setTitleComplete(true);
+                  setShowSubtitle(true);
+                }}
+              />
+            )}
+          </h1>
+          {showSubtitle && (
+            <p className="intro-subtitle">
+              <Typewriter text="Click on the TV to enter" speed={50} />
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
