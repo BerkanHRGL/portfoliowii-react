@@ -11,6 +11,9 @@ function LivingRoomModel({ onClick }) {
   const gltf = useGLTF(roomModel);
   const screenTexture = useTexture('/imgs/homepage.png');
   screenTexture.flipY = false;
+  screenTexture.wrapS = THREE.RepeatWrapping;
+  screenTexture.repeat.x = -1;
+  screenTexture.offset.x = 1;
   screenTexture.colorSpace = THREE.SRGBColorSpace;
 
   // Clone the scene once
