@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WarningScreen from './components/WarningScreen';
+import TVIntro from './pages/TVIntro';
 import WiiMenu from './components/WiiMenu';
 import Projects from './pages/Projects';
 import ProjectsApple from './pages/ProjectsApple';
@@ -39,7 +40,8 @@ function App() {
         clickPosition={clickPosition}
       />
       <Routes>
-        <Route path="/" element={<WiiMenu setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
+        <Route path="/" element={<TVIntro setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
+        <Route path="/menu" element={<WiiMenu setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/projects" element={<Projects setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/projects-apple" element={<ProjectsApple setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/reading-guide" element={<ReadingGuide setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />

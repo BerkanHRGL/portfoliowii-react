@@ -10,7 +10,7 @@ const AboutMe = ({ setIsTransitioning, setClickPosition }) => {
     setClickPosition({ x: event.clientX, y: event.clientY });
     setIsTransitioning(true);
     setTimeout(() => {
-      navigate('/');
+      navigate('/menu');
     }, 400);
   };
 

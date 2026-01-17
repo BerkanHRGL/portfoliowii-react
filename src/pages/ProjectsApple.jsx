@@ -76,7 +76,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
     setClickPosition({ x: event.clientX, y: event.clientY });
     setIsTransitioning(true);
     setTimeout(() => {
-      navigate('/');
+      navigate('/menu');
     }, 400);
   };
 
@@ -420,19 +420,150 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
                 <img src="/imgs/realityscan2.jpg" alt="RealityScan 2" />
               </div>
             </div>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>RealityScan to Unreal Engine Workflow</h3>
+            <p className="apple-section-text">
+              After determining that RealityScan produced the best quality results for our needs, I documented the complete workflow from capturing photos to having a game-ready 3D asset in Unreal Engine. This tutorial was essential for our research, as it allowed us to validate that RealityScan wasn't just producing good-looking models, but models that could actually be used in real-time production environments.
+            </p>
+            <p className="apple-section-text">
+              The workflow covers the entire pipeline: importing and aligning images, scaling to real-world dimensions, setting proper orientation, reconstructing the mesh, texturing, optimization for real-time use, and finally exporting to Unreal Engine. Each step includes specific technical settings and decisions that affect the final asset quality and performance.
+            </p>
+            <p className="apple-section-text">
+              <strong>Why This Matters:</strong> Understanding the full pipeline is critical because a photogrammetry tool is only as good as its integration with your production environment. By documenting this end-to-end process, we proved that RealityScan doesn't just create pretty 3D models—it creates production-ready assets that work seamlessly in Unreal Engine, which is exactly what we needed for our virtual production short film.
+            </p>
+            <a
+              href="/pdfs/workflow_tutorial.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="apple-cta-button apple-cta-primary"
+              style={{ marginTop: '32px', display: 'inline-block' }}
+            >
+              View Complete Workflow Tutorial PDF
+            </a>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Project Summary Video</h3>
+            <p className="apple-section-text">
+              After documenting the workflow in written form, I created a video summary using Adobe Premiere Pro that showcases our entire photogrammetry pipeline in action. The video demonstrates the full process from capturing photos to having a working 3D asset in Unreal Engine, making it easier to understand the workflow visually rather than just reading documentation.
+            </p>
+            <p className="apple-section-text">
+              This video serves multiple purposes: it documents our research process for evaluating photogrammetry software, demonstrates video editing skills using Premiere Pro, and provides a shareable resource that explains our technical approach in an accessible format.
+            </p>
+
+            <h4 className="apple-card-title" style={{ marginTop: '60px' }}>Initial Version</h4>
+            <p className="apple-section-text">
+              The first version of the video focused on clearly explaining each step of the workflow. I structured it to follow the same sequence as the written tutorial, adding visual examples and screen recordings to make the technical process easier to follow.
+            </p>
+            <div className="apple-video-container" style={{ marginTop: '40px', marginBottom: '60px' }}>
+              <video
+                controls
+                style={{ width: '100%', maxWidth: '1200px', borderRadius: '12px' }}
+              >
+                <source src="/vids/firstversion.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <h4 className="apple-card-title" style={{ marginTop: '80px' }}>Team Feedback & Iteration</h4>
+            <p className="apple-section-text">
+              After showing the initial version to Lars and the rest of the project group, I received valuable feedback on pacing, clarity, and visual presentation. The team helped me identify sections that needed more explanation and parts that could be simplified.
+            </p>
+            <div className="apple-grid-2" data-animate="true" style={{ marginTop: '40px' }}>
+              <div className="apple-card-image">
+                <img src="/imgs/feedback.png" alt="Team Feedback Session 1" />
+                <p style={{ marginTop: '12px', fontSize: '14px', opacity: '0.7', textAlign: 'center' }}>Feedback Session Notes</p>
+              </div>
+              <div className="apple-card-image">
+                <img src="/imgs/feedback2.png" alt="Team Feedback Session 2" />
+                <p style={{ marginTop: '12px', fontSize: '14px', opacity: '0.7', textAlign: 'center' }}>Revision Checklist</p>
+              </div>
+            </div>
+
+            <h4 className="apple-card-title" style={{ marginTop: '80px' }}>Revised Version</h4>
+            <p className="apple-section-text">
+              Based on the feedback, I refined the video by adjusting the pacing, adding clearer annotations, and improving transitions between workflow steps. I also added more variation throughout the video to keep it engaging and dynamic.
+            </p>
+            <p className="apple-section-text">
+              One key improvement was replacing the initial two static images in the first scene with actual video footage. This change made much more sense because it shows the photogrammetry process from multiple angles in motion, giving viewers a better understanding of how we capture the object from different perspectives. Static images couldn't convey this movement and variety as effectively.
+            </p>
+            <div className="apple-video-container" style={{ marginTop: '40px', marginBottom: '40px' }}>
+              <video
+                controls
+                style={{ width: '100%', maxWidth: '1200px', borderRadius: '12px' }}
+              >
+                <source src="/vids/secondversion.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </section>
 
         {/* Short Movie */}
         <section id="short-movie" className="apple-section apple-dark">
           <div className="apple-container">
-            <h2 className="apple-section-title">Short Movie</h2>
+            <h2 className="apple-section-title">Virtual Production Short Film</h2>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '60px' }}>Project Overview & Purpose</h3>
             <p className="apple-section-text">
-              Me and my project partner Lars worked on creating a short movie using the photogrammetry techniques we learned. We started by planning out the whole concept, what story we wanted to tell, how we'd use the photogrammetry assets, and what would inspire the visual style.
+              This project serves two parallel goals that bridge technical skill-building with meaningful storytelling. First, we wanted to go beyond just creating 3D assets—we wanted to see how they actually perform in real production scenarios. Most 3D modeling education stops at asset creation, but we wanted to complete the full pipeline: modeling → virtual environment setup → cinematography → final film.
             </p>
-            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Project Brief & Inspiration</h3>
             <p className="apple-section-text">
-              Before jumping into production, we put together a project brief that laid out our vision for the short film. This included our concept, inspirations, and how we planned to showcase photogrammetry in a way that's actually interesting to watch. The brief helped us stay focused and make sure we were on the same page throughout the project.
+              Second, we wanted to explore an important narrative: the paradox of technology disconnecting us from real experiences while promising to enhance them. The core message is simple but powerful: don't focus so much on capturing life that you forget to live it.
+            </p>
+
+            <div className="apple-grid-2" data-animate="true" style={{ marginTop: '60px' }}>
+              <div className="apple-card">
+                <h4 className="apple-card-title">Technical Goal</h4>
+                <p className="apple-card-text">
+                  Demonstrate end-to-end virtual production workflow using LED wall technology and Unreal Engine. Testing our 3D models in practical cinematography scenarios while gaining hands-on experience with industry-standard virtual production techniques.
+                </p>
+              </div>
+              <div className="apple-card">
+                <h4 className="apple-card-title">Narrative Goal</h4>
+                <p className="apple-card-text">
+                  Explore how technology meant to capture memories can prevent us from being present. Think of parents filming their kids through a screen instead of watching them directly. The film prompts reflection without being preachy.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Target Audience & Context</h3>
+            <p className="apple-section-text">
+              <strong>Primary Audience:</strong> Potential employers in VFX and film production who value practical virtual production experience. This project demonstrates both technical competency and storytelling ability.
+            </p>
+            <p className="apple-section-text">
+              <strong>Format:</strong> 3-4 minute narrative short film<br/>
+              <strong>Production Location:</strong> Pixel Playground (virtual production studio)<br/>
+              <strong>Team:</strong> Berkan Hergül & Lars (co-directors and cinematographers)
+            </p>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Research & Creative Direction</h3>
+            <p className="apple-section-text">
+              Before production, we analyzed two key references that shaped our creative approach:
+            </p>
+
+            <div className="apple-split" data-animate="true" style={{ marginTop: '40px' }}>
+              <div className="apple-split-content">
+                <h4 className="apple-card-title">Apple Vision Pro Launch Ads (2024)</h4>
+                <p className="apple-section-text">
+                  We studied the controversial clips of a parent filming children while wearing the Vision Pro headset. These moments resonated with audiences because they felt sad—the parent wasn't participating in the joy, just capturing it through a screen. This visual of technology creating emotional distance became a key motif for our film.
+                </p>
+                <p className="apple-section-text">
+                  <strong>Key Insight:</strong> Technology marketed to "enhance memories" can actually prevent genuine presence in the moment.
+                </p>
+              </div>
+              <div className="apple-split-content">
+                <h4 className="apple-card-title">Black Mirror S7E5: "Eulogy"</h4>
+                <p className="apple-section-text">
+                  This episode became our main narrative anchor. The protagonist curates memories so extensively that he loses authentic connection to them. Only when he finds an unedited cassette tape does he feel real emotion. This structure—someone realizing they've traded authenticity for curation—directly inspired our narrative arc.
+                </p>
+                <p className="apple-section-text">
+                  <strong>Tone Reference:</strong> Melancholic and empathetic, not judgmental. Viewers should see their own digital habits reflected.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Project Brief & Concept Development</h3>
+            <p className="apple-section-text">
+              Before starting any production work, we developed a comprehensive project brief that outlines our technical approach, narrative structure, and creative inspirations. This document served as our north star throughout pre-production, ensuring Lars and I stayed aligned on vision and goals.
             </p>
             <a
               href="/pdfs/Virtual Production Short Film - Project Brief.pdf"
@@ -441,16 +572,20 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
               className="apple-cta-button apple-cta-primary"
               style={{ marginTop: '32px', display: 'inline-block', marginBottom: '80px' }}
             >
-              View Project Brief PDF
+              View Complete Project Brief PDF
             </a>
+
             <div className="apple-split" data-animate="true">
               <div className="apple-split-content">
-                <h3 className="apple-subsection-title">Storyboarding Process</h3>
+                <h3 className="apple-subsection-title">Storyboarding & Shot Planning</h3>
                 <p className="apple-section-text">
-                  We drew the whole storyboard on the whiteboard and took pictures of it. Then we used those sketches and turned them into a comic-style storyboard using Nano Banana Pro. This helped us visualize the story better and see how the short movie would actually flow before we started filming.
+                  We started by sketching the entire narrative on a whiteboard, mapping out the emotional journey and key visual moments. These rough sketches were photographed and refined into a polished comic-style storyboard using Nano Banana Pro. This visualization process was critical for understanding pacing, composition, and how the story would flow before stepping into the studio.
                 </p>
                 <p className="apple-section-text">
-                  The storyboard shows the whole journey of how our short movie would work. We wanted to make it easy to understand and visually interesting.
+                  <strong>Production Constraint:</strong> After consulting with Chris, we learned that the Pixel Playground cannot easily accommodate top-down camera angles due to LED wall limitations. We adjusted our storyboard to focus on front-facing and side angles, ensuring our creative vision works within technical constraints.
+                </p>
+                <p className="apple-section-text">
+                  <strong>Shot Structure:</strong> The storyboard maps approximately 12-15 shots across the 3-4 minute runtime, emphasizing emotional intimacy through medium shots and close-ups that showcase the protagonist's isolation.
                 </p>
                 <a
                   href="/pdfs/cartoonstoryboard-2.pdf"
@@ -459,7 +594,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
                   className="apple-cta-button apple-cta-primary"
                   style={{ marginTop: '32px', display: 'inline-block' }}
                 >
-                  View Storyboard PDF
+                  View Detailed Storyboard PDF
                 </a>
               </div>
               <div className="apple-split-image-stack">
@@ -468,6 +603,14 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
                 ))}
               </div>
             </div>
+
+            <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Why This Project Matters</h3>
+            <p className="apple-section-text">
+              This isn't just about making a short film—it's about proving we understand the full production pipeline and can deliver both technically impressive and emotionally resonant work. Virtual production is rapidly becoming the industry standard (see: The Mandalorian, Avatar sequels), and hands-on experience with LED wall workflows is invaluable for breaking into VFX and film production.
+            </p>
+            <p className="apple-section-text">
+              Beyond technical skills, this project combines my interests in cinematography and 3D modeling into a cohesive portfolio piece that demonstrates strategic thinking, creative problem-solving, and the ability to navigate real production constraints.
+            </p>
           </div>
         </section>
 
