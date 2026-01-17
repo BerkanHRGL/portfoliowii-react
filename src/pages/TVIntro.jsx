@@ -1,11 +1,11 @@
-import { useState, Suspense, useEffect, useRef } from 'react';
+import { useState, Suspense, useEffect, useRef, useMemo } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { useGLTF, OrbitControls, useTexture } from '@react-three/drei';
 import { useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import './TVIntro.css';
-import roomModel from '../assets/tv_room.glb?url';
+import roomModel from '../assets/tv_room_draco.glb?url';
 
 useGLTF.preload(roomModel);
 
@@ -40,64 +40,88 @@ function Typewriter({ text, speed = 50, delay = 0, onComplete }) {
 }
 
 function LivingRoomModel({ onClick }) {
-  const gltf = useGLTF(roomModel);
+  const { scene } = useGLTF(roomModel);
   const screenTexture = useTexture('/imgs/homepage.png');
+
+  // Fix texture settings
   screenTexture.flipY = false;
-  screenTexture.wrapS = THREE.RepeatWrapping;
+  screenTexture.wrapS = THREE.ClampToEdgeWrapping;
   screenTexture.repeat.x = -1;
   screenTexture.offset.x = 1;
   screenTexture.colorSpace = THREE.SRGBColorSpace;
 
-  // Clone the scene once
-  const clonedScene = gltf.scene.clone();
+  // Memoize the scene setup to prevent recreating materials on every frame
+  const clonedScene = useMemo(() => {
+    const sceneClone = scene.clone();
 
-  // Fix materials and apply texture to the TV screen mesh
-  clonedScene.traverse((child) => {
-    if (child.isMesh) {
-      // Fix materials - ensure they respond to light and have color
-      if (child.material) {
-        // Clone the material to avoid affecting other instances
-        child.material = child.material.clone();
+    // Fix materials and apply texture to the TV screen mesh
+    sceneClone.traverse((child) => {
+      if (child.isMesh) {
+        // Fix materials - ensure they respond to light and have color
+        if (child.material) {
+          // Clone the material to avoid affecting other instances
+          child.material = child.material.clone();
 
-        // Enable color space
-        if (child.material.map) {
-          child.material.map.colorSpace = THREE.SRGBColorSpace;
+          // Enable color space
+          if (child.material.map) {
+            child.material.map.colorSpace = THREE.SRGBColorSpace;
+          }
+
+          // If material has no color, set a default
+          if (!child.material.color || child.material.color.getHex() === 0x000000) {
+            child.material.color = new THREE.Color(0xcccccc);
+          }
+
+          // Ensure material responds to light
+          child.material.needsUpdate = true;
         }
 
-        // If material has no color, set a default
-        if (!child.material.color || child.material.color.getHex() === 0x000000) {
-          child.material.color = new THREE.Color(0xcccccc);
-        }
+        // Find the TV screen mesh by name and material
+        if (child.name === 'Object_34' || child.material?.name === 'screen_off') {
+          console.log('✅ Found TV screen:', child.name);
+          console.log('📷 Screen texture:', screenTexture);
+          console.log('🖼️ Texture image:', screenTexture.image);
+          console.log('📐 Texture size:', screenTexture.image?.width, 'x', screenTexture.image?.height);
+          console.log('🔄 Has UVs:', !!child.geometry?.attributes?.uv);
+          console.log('📊 UV count:', child.geometry?.attributes?.uv?.count);
+          console.log('📦 Geometry:', child.geometry);
+          console.log('🎨 Original material:', child.material);
 
-        // Ensure material responds to light
-        child.material.needsUpdate = true;
+          // Check if UV coordinates exist and are valid
+          if (child.geometry?.attributes?.uv) {
+            const uvArray = child.geometry.attributes.uv.array;
+            console.log('🔍 First few UV coordinates:', uvArray.slice(0, 20));
+          } else {
+            console.warn('⚠️ No UV coordinates found on geometry!');
+          }
+
+          // Apply the homepage texture with proper orientation
+          child.material = new THREE.MeshStandardMaterial({
+            map: screenTexture,
+            color: new THREE.Color(0xffffff),
+            emissive: new THREE.Color(0xffffff),
+            emissiveMap: screenTexture,
+            emissiveIntensity: 1.0,
+            roughness: 0.1,
+            metalness: 0.5,
+            side: THREE.DoubleSide, // Render on both sides
+          });
+
+          console.log('✨ New material applied:', child.material);
+
+          // Flip geometry if needed - check the normals
+          if (child.geometry) {
+            child.geometry.computeVertexNormals();
+          }
+
+          // Store the onClick handler on the mesh's userData
+          child.userData.isClickable = true;
+        }
       }
+    });
 
-      // Find the TV screen mesh by name and material
-      if (child.name === 'Object_34' || child.material?.name === 'screen_off') {
-        console.log('Found TV screen:', child.name);
-
-        // Apply the homepage texture with proper orientation
-        child.material = new THREE.MeshStandardMaterial({
-          map: screenTexture,
-          emissive: new THREE.Color(0xffffff),
-          emissiveMap: screenTexture,
-          emissiveIntensity: 1.2,
-          roughness: 0.1,
-          metalness: 0.5,
-          side: THREE.DoubleSide, // Render on both sides
-        });
-
-        // Flip geometry if needed - check the normals
-        if (child.geometry) {
-          child.geometry.computeVertexNormals();
-        }
-
-        // Store the onClick handler on the mesh's userData
-        child.userData.isClickable = true;
-      }
-    }
-  });
+    return sceneClone;
+  }, [scene, screenTexture]);
 
   const handleClick = (event) => {
     // Check if the clicked object is the TV screen
