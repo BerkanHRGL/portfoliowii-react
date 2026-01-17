@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import './TVIntro.css';
-import roomModel from '../assets/tv_room_draco.glb?url';
+import roomModel from '../assets/tv_room_final.glb?url';
 
 useGLTF.preload(roomModel);
 
