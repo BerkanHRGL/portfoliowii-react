@@ -437,9 +437,6 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
               <div className="apple-split-content">
                 <h3 className="apple-subsection-title" style={{ marginTop: '0' }}>What I Need to Work On</h3>
                 <p className="apple-section-text">Gain hands-on experience in mobile app development before specialization</p>
-                <p className="apple-section-text">Expand portfolio to showcase more UX/UI focused case studies with user research</p>
-                <p className="apple-section-text">Share knowledge by mentoring other students in areas where I'm strong</p>
-                <p className="apple-section-text">Take on leadership roles in team projects, not just execute assigned tasks</p>
                 <p className="apple-section-text">Improve time management to avoid over-perfecting small details</p>
               </div>
             </div>
