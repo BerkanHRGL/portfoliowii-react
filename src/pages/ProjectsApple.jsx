@@ -297,7 +297,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
                 I originally wanted to go for a modern, clean look for the website based on my research of current agency trends. I created the first version with a minimal design, lots of white space, and modern typography.
               </p>
               <p className="apple-section-text">
-                <strong>Feedback received:</strong> The brand guide got a complete remake by my teammates. The new direction was more vintage and retro, which didn't match my modern design at all.
+                <strong>Feedback received:</strong> We decided as a team to completely remake the brand guide. Working together in Figma, we shifted the direction to something more vintage and retro, which didn't match my modern design at all.
               </p>
               <p className="apple-section-text">
                 <strong>What I changed:</strong> I had to completely switch up my design approach to align with the new vintage brand identity. This meant changing typography, color treatments, and overall visual style.
@@ -348,7 +348,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
               </p>
               <h3 className="apple-subsection-title" style={{ marginTop: '80px' }}>Brand Guide Implementation</h3>
               <p className="apple-section-text">
-                Throughout the design process, I followed the brand guide my teammates created to keep everything consistent with Ducks on Fire's visual identity.
+                Throughout the design process, I worked with the brand guide we created together as a team to keep everything consistent with Ducks on Fire's visual identity.
               </p>
               <a
                 href="/pdfs/Brandguide Ducks On Fire.pdf"
@@ -397,10 +397,13 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
           </a>
           <h3 className="apple-subsection-title">Design Version Control & Collaboration</h3>
           <p className="apple-section-text">
-            While I used GitHub for code, we also worked on the brand guide in Figma. Figma's version control works like Git for design, tracking changes, enabling real-time collaboration, and maintaining a complete project history.
+            While I used GitHub for code, our team worked together on the brand guide using Figma. Figma's real-time collaboration meant we could all work on the same file at once. We could see each other's cursors moving around, leave comments on specific elements, and watch changes happen live. It's honestly way better than passing files back and forth.
           </p>
           <p className="apple-section-text">
-            The entire brand guide: colors, fonts, logo variations, spacing rules, were documented in one Figma file. This made it easy to reference exact design values when building the website without constantly asking teammates for details.
+            Figma's version control works like Git for design. Every change gets tracked automatically, you can see the full history of who changed what and when, and you can always go back to earlier versions if needed. This was super helpful when we were experimenting with different color palettes and typography choices. If something didn't work out, we could just revert to a previous version.
+          </p>
+          <p className="apple-section-text">
+            The entire brand guide (colors, fonts, logo variations, spacing rules) lived in one Figma file that we all had access to. This meant I could reference exact design values when building the website without constantly asking teammates for details. Everything was already documented and updated in real-time by the whole team.
           </p>
         </div>
       </section>
@@ -439,7 +442,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
             The workflow covers everything you need to do. You import and align your images, scale everything to match real world dimensions, set the right orientation, reconstruct the mesh, add textures, optimize it so it runs smoothly in real-time, and then export it to Unreal Engine. Each step involves specific settings and choices that affect how the final asset looks and performs.
           </p>
           <p className="apple-section-text">
-            <strong>Why this matters:</strong> A photogrammetry tool is only useful if it integrates well with your production setup. By documenting this complete process, we proved that RealityScan creates assets that actually work in Unreal Engine, not just models that look nice in screenshots. That's what we needed for the virtual production short film.
+            <strong>Why this matters:</strong> A photogrammetry tool is only useful if it integrates well with your production setup. By documenting this complete process, we proved that RealityScan creates assets that actually work in Unreal Engine, not just models that look nice in screenshots. That's what we needed.
           </p>
           <a
             href="/pdfs/workflow_tutorial.pdf"
@@ -484,7 +487,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
             </div>
             <div className="apple-card-image">
               <img src="/imgs/feedback2.png" alt="Team Feedback Session 2" />
-              <p style={{ marginTop: '12px', fontSize: '14px', opacity: '0.7', textAlign: 'center' }}>Revision Checklist</p>
+              <p style={{ marginTop: '12px', fontSize: '14px', opacity: '0.7', textAlign: 'center' }}>Feedback Session Notes</p>
             </div>
           </div>
 
@@ -582,7 +585,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
                 We started by sketching the whole story on a whiteboard, figuring out the emotional beats and important visual moments. Then we took photos of those rough sketches and turned them into a proper comic-style storyboard using Nano Banana Pro. This let us understand the pacing, figure out compositions, and see how the story flows before we actually started shooting.
               </p>
               <p className="apple-section-text">
-                <strong>Production issue:</strong> After talking with Chris, we found out the Pixel Playground can't really do top-down camera angles because of technical limitations. So we changed our storyboard to stick with front-facing and side shots instead, making sure what we wanted to create would actually work in the studio.
+                <strong>Production issue:</strong> After getting feedback from Chris, we found out the Pixel Playground can't really do top-down camera angles because of technical limitations. So we changed our storyboard to stick with front-facing and side shots instead, making sure what we wanted to create would actually work in the studio.
               </p>
               <p className="apple-section-text">
                 <strong>Shot structure:</strong> The storyboard has about 12-15 shots spread across the 3-4 minute runtime. We're focusing on medium shots and close-ups to create that intimate feeling and show how isolated the main character is.
@@ -662,6 +665,52 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Final Presentation */}
+      <section id="final-presentation" className="apple-section apple-dark">
+        <div className="apple-container">
+          <h2 className="apple-section-title">Final Presentation</h2>
+          <p className="apple-section-text">
+            At the end of the semester, we presented our Ducks on Fire project. I took the initiative to start the presentation and explain what we worked on.
+          </p>
+          <p className="apple-section-text">
+            I talked about our workflow for photogrammetry and how we used RealityScan to create 3D models for Unreal Engine. I also covered the video tutorial I made that shows the process from start to finish - basically how to get from photos to a working 3D asset in Unreal.
+          </p>
+          <p className="apple-section-text">
+            It was a good opportunity to show what we built and explain the technical process behind it.
+          </p>
+
+          <div className="video-container" style={{ marginTop: '60px' }}>
+            <div style={{
+              position: 'relative',
+              paddingBottom: '56.25%',
+              height: 0,
+              overflow: 'hidden',
+              borderRadius: '12px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+            }}>
+              <iframe
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 0
+                }}
+                src="https://www.youtube.com/embed/BSOgwETwE0w"
+                title="Ducks on Fire Final Presentation"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <p className="apple-section-text" style={{ marginTop: '40px', fontStyle: 'italic', color: '#888' }}>
+            Watch the full presentation to see how we explained our project process, demonstrated our work, and answered questions from teachers and peers.
+          </p>
         </div>
       </section>
 
@@ -902,7 +951,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
       <section id="portfolio-feedback" className="apple-section apple-dark">
         <div className="apple-container">
           <h2 className="apple-section-title">Iterations & Feedback</h2>
-          <h3 className="apple-subsection-title">Balancing Creativity & Professionalism</h3>
+          <h3 className="apple-subsection-title" style={{ marginTop: '60px' }}>Balancing Creativity & Professionalism</h3>
           <p className="apple-section-text">
             The biggest challenge was making sure the playful Wii theme didn't make my portfolio look unprofessional or childish. I showed early versions to friends and classmates to get feedback. Some said it was too game-like, others said it wasn't playful enough. Finding that sweet spot took a lot of adjustments and fine-tuning.
           </p>

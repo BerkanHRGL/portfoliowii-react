@@ -1,4 +1,10 @@
-.about-me-view {
+/* Override root overflow for this page */
+body:has(.contact-view) #root {
+  height: auto;
+  overflow: visible;
+}
+
+.contact-view {
   width: 100%;
   min-height: 100vh;
   background: #fcfcfc;
@@ -10,7 +16,7 @@
 }
 
 /* Dot grid background */
-.about-me-dotgrid {
+.contact-dotgrid {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -43,15 +49,15 @@
   background: #fff;
 }
 
-.about-me-container {
-  max-width: 1200px;
+.contact-container {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 80px 40px 150px;
   position: relative;
   z-index: 1;
 }
 
-.about-me-header {
+.contact-header {
   text-align: left;
   margin-bottom: 60px;
   display: flex;
@@ -139,231 +145,146 @@
   }
 }
 
-/* Message Board Grid */
-.message-board {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+/* Contact Content */
+.contact-content {
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
 }
 
-/* Individual Note Card */
-.message-note {
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-card {
   background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor: url('/cursor/link select.cur'), pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.message-note::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #4a90e2 0%, #67b5ff 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.contact-section {
+  margin-bottom: 48px;
 }
 
-.message-note:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+.contact-section:last-child {
+  margin-bottom: 0;
 }
 
-.message-note:hover::before {
-  opacity: 1;
-}
-
-.note-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 12px;
-  gap: 12px;
-}
-
-.note-title {
-  font-size: 20px;
-  font-weight: 500;
+.contact-section-title {
+  font-size: 28px;
+  font-weight: 600;
   color: #1d1d1f;
-  flex: 1;
+  margin: 0 0 20px 0;
 }
 
-.note-date {
-  font-size: 12px;
-  color: #888;
-  white-space: nowrap;
-  font-weight: 500;
-}
-
-.note-preview {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
+.contact-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
   margin: 0;
 }
 
-/* Note Modal */
-.note-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 20px;
-  animation: fadeIn 0.3s ease;
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.note-modal {
-  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 700px;
-  width: 100%;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+.contact-list li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  padding-left: 28px;
+  margin-bottom: 12px;
   position: relative;
-  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.note-close {
+.contact-list li::before {
+  content: '✓';
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  font-size: 32px;
-  line-height: 1;
-  color: #666;
-  cursor: url('/cursor/link select.cur'), pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 0;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.note-close:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #333;
+/* Contact Methods */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.note-modal-title {
-  font-size: 32px;
-  font-weight: 500;
-  color: #1d1d1f;
-  margin: 0 0 8px 0;
-}
-
-.note-modal-date {
-  font-size: 14px;
-  color: #888;
-  margin: 0 0 24px 0;
-  font-weight: 500;
-}
-
-.note-modal-content {
-  color: #333;
-  line-height: 1.8;
-}
-
-.note-paragraph {
-  margin: 0 0 16px 0;
-  font-size: 16px;
-}
-
-.note-stats {
-  display: flex;
-  gap: 24px;
-  margin-top: 24px;
-  padding: 20px;
-  background: rgba(74, 144, 226, 0.05);
-  border-radius: 12px;
-  border-left: 4px solid #4a90e2;
-}
-
-.note-stat {
+.contact-method {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(102, 126, 234, 0.02) 100%);
+  border-radius: 16px;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-.stat-label {
-  font-size: 12px;
-  color: #888;
+.contact-method:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.contact-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.contact-label {
+  font-size: 14px;
   font-weight: 600;
+  color: #888;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.stat-value {
-  font-size: 18px;
-  color: #2c5aa0;
-  font-weight: 600;
-}
-
-.note-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.skill-tag {
-  padding: 8px 16px;
-  background: linear-gradient(135deg, #4a90e2 0%, #67b5ff 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 14px;
+.contact-value {
+  font-size: 17px;
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+  color: #1d1d1f;
 }
 
-.note-projects,
-.note-contact {
-  margin-top: 20px;
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
 }
 
-.project-item,
-.contact-item {
+.skill-category {
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(102, 126, 234, 0.02) 100%);
+  border-radius: 16px;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.skill-category h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1f;
   margin: 0 0 12px 0;
+}
+
+.skill-category p {
   font-size: 15px;
-  color: #555;
   line-height: 1.6;
+  color: #555;
+  margin: 0;
 }
 
 /* Social icons */
@@ -410,7 +331,7 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .about-me-container {
+  .contact-container {
     padding: 80px 20px 120px;
   }
 
@@ -428,24 +349,24 @@
     font-size: 16px;
   }
 
-  .message-board {
+  .contact-card {
+    padding: 32px 24px;
+  }
+
+  .contact-section {
+    margin-bottom: 36px;
+  }
+
+  .contact-section-title {
+    font-size: 24px;
+  }
+
+  .contact-methods {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 
-  .note-modal {
-    padding: 30px 24px;
-    max-height: 85vh;
-  }
-
-  .note-modal-title {
-    font-size: 26px;
-    margin-right: 30px;
-  }
-
-  .note-stats {
-    flex-direction: column;
-    gap: 16px;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .back-button {
@@ -477,7 +398,7 @@
 }
 
 @media (max-width: 480px) {
-  .about-me-container {
+  .contact-container {
     padding: 70px 16px 100px;
   }
 
@@ -493,23 +414,18 @@
     font-size: 15px;
   }
 
-  .message-note {
-    padding: 20px;
-  }
-
-  .note-modal {
+  .contact-card {
     padding: 24px 20px;
-    border-radius: 16px;
   }
 
-  .note-modal-title {
+  .contact-section-title {
     font-size: 22px;
   }
 
-  .note-close {
-    width: 36px;
-    height: 36px;
-    font-size: 28px;
+  .contact-text,
+  .contact-list li,
+  .contact-value {
+    font-size: 15px;
   }
 
   .back-button {

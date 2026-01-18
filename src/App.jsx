@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import ProjectsApple from './pages/ProjectsApple';
 import ReadingGuide from './pages/ReadingGuide';
 import AboutMe from './pages/AboutMe';
+import Contact from './pages/Contact';
 import PageTransition from './components/PageTransition/PageTransition';
 import './styles/main.css';
 
@@ -46,6 +47,7 @@ function App() {
         <Route path="/projects-apple" element={<ProjectsApple setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/reading-guide" element={<ReadingGuide setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
         <Route path="/about-me" element={<AboutMe setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
+        <Route path="/contact" element={<Contact setIsTransitioning={setIsTransitioning} setClickPosition={setClickPosition} />} />
       </Routes>
     </Router>
   );

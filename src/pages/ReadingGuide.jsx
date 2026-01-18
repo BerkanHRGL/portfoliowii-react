@@ -176,9 +176,7 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
               </div>
               <div className="apple-split-content">
                 <h3 className="apple-subsection-title" style={{ marginTop: '0' }}>What I Need to Work On</h3>
-                <p className="apple-section-text">Conduct formal user testing with target audience, not just classmates and friends</p>
                 <p className="apple-section-text">Apply structured UX research methods like personas, user journeys, and usability testing</p>
-                <p className="apple-section-text">Measure design effectiveness with quantitative data and analytics</p>
                 <p className="apple-section-text">Document design decisions more thoroughly for stakeholder communication</p>
               </div>
             </div>
@@ -186,44 +184,32 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Evidence</h3>
             <div className="apple-evidence-list">
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#research" onClick={(e) => handleEvidenceClick(e, 'research')}>Agency Research Process</a></h4>
-                <p className="apple-evidence-text">Researched creative digital agencies to understand what makes effective agency websites and how to position Ducks on Fire in the market.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#research" onClick={(e) => handleEvidenceClick(e, 'research')}>Agency Research & Best Practice Analysis</a></h4>
+                <p className="apple-evidence-text">I researched creative digital agencies using Library Research and compared about 6 different agency websites to figure out what works and what doesn't. This helped me understand what makes a good agency website before I started designing.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#user-testing" onClick={(e) => handleEvidenceClick(e, 'user-testing')}>User Testing Sessions</a></h4>
-                <p className="apple-evidence-text">Showed design iterations to teammates, classmates, and friends to get feedback on visual appeal, clarity, and user experience.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#design-iterations" onClick={(e) => handleEvidenceClick(e, 'design-iterations')}>Iterative Design with Peer Review</a></h4>
+                <p className="apple-evidence-text">I created multiple design versions in Figma and got feedback from my team and teacher on each one. You can see how I shifted from a modern look to a more vintage aesthetic based on the feedback, which ended up matching the brand guide we created together.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#design-iterations" onClick={(e) => handleEvidenceClick(e, 'design-iterations')}>Design Development in Figma</a></h4>
-                <p className="apple-evidence-text">Created multiple design concepts in Figma, trying different approaches to present the agency's services before choosing the final direction.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#user-testing" onClick={(e) => handleEvidenceClick(e, 'user-testing')}>User Testing & Feedback Integration</a></h4>
+                <p className="apple-evidence-text">I tested my designs with teammates, classmates, and friends throughout the process. I documented what they said and what I changed based on their feedback, which helped me improve the designs with actual user input.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>Website Implementation</a></h4>
-                <p className="apple-evidence-text">Coded the final website using HTML, CSS, and JavaScript, turning the visual designs into a working, responsive website.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Virtual Production Short Film Concept</a></h4>
+                <p className="apple-evidence-text">I came up with a concept for a short film about how we get too focused on recording moments instead of actually experiencing them. It let me test photogrammetry in a real production while also telling a meaningful story.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#poster" onClick={(e) => handleEvidenceClick(e, 'poster')}>Infographic Poster Design</a></h4>
-                <p className="apple-evidence-text">Created an infographic poster to visually communicate the agency's information, applying visual design techniques and brand guidelines.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-3d-intro" onClick={(e) => handleEvidenceClick(e, 'portfolio-3d-intro')}>3D Interactive Portfolio Intro</a></h4>
+                <p className="apple-evidence-text">I taught myself Three.js and React Three Fiber to build an interactive 3D living room as my portfolio intro. It was a challenge, but it gave my portfolio a unique first impression while showing I can learn new tech on my own.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#3d-modeling" onClick={(e) => handleEvidenceClick(e, '3d-modeling')}>3D Modeling with Photogrammetry</a></h4>
-                <p className="apple-evidence-text">Explored emerging technology by experimenting with PhotoModeler for photogrammetry to create 3D models from photographs.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-ab-testing" onClick={(e) => handleEvidenceClick(e, 'portfolio-ab-testing')}>A/B Testing & User Research</a></h4>
+                <p className="apple-evidence-text">I created a survey with 12 questions and got 6 people to answer it to validate whether the 3D intro was actually a good idea. The data backed up my decision, which showed me the value of testing ideas with users instead of just guessing.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Short Movie Conceptualization</a></h4>
-                <p className="apple-evidence-text">Developed an engaging concept for a short movie showcasing photogrammetry techniques. Created visual storyboards to translate the concept into a professional media product, demonstrating emerging technology in a creative narrative format.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-research" onClick={(e) => handleEvidenceClick(e, 'portfolio-research')}>Portfolio Research & Inspiration</a></h4>
-                <p className="apple-evidence-text">Researched other portfolios and analyzed the Wii menu system to create a unique, themed portfolio that stands out while maintaining professionalism.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-design" onClick={(e) => handleEvidenceClick(e, 'portfolio-design')}>Portfolio Design Process</a></h4>
-                <p className="apple-evidence-text">Created multiple design iterations in Figma, balancing playful Wii aesthetics with professional presentation through user-centered design principles.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-development" onClick={(e) => handleEvidenceClick(e, 'portfolio-development')}>Interactive Features Development</a></h4>
-                <p className="apple-evidence-text">Developed interactive elements like the dot grid physics system, expandable cards, and smooth page transitions using modern web technologies (React, GSAP).</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-development" onClick={(e) => handleEvidenceClick(e, 'portfolio-development')}>Interactive Web Development</a></h4>
+                <p className="apple-evidence-text">I built some pretty complex interactive features using React and GSAP - like the dot grid that reacts to your mouse, cards that expand, smooth page transitions, and that circular wipe effect when you click.</p>
               </div>
             </div>
           </div>
@@ -258,7 +244,6 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
               </div>
               <div className="apple-split-content">
                 <h3 className="apple-subsection-title" style={{ marginTop: '0' }}>What I Need to Work On</h3>
-                <p className="apple-section-text">Write better code comments explaining complex logic and decision-making</p>
                 <p className="apple-section-text">Develop documentation that's accessible and useful for other developers</p>
               </div>
             </div>
@@ -266,32 +251,28 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Evidence</h3>
             <div className="apple-evidence-list">
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>GitHub Version Control</a></h4>
-                <p className="apple-evidence-text">Used GitHub for the Ducks on Fire project with commit messages to track development progress and changes.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>GitHub Version Control for Code</a></h4>
+                <p className="apple-evidence-text">I used GitHub with clear commit messages for both the Ducks on Fire project and my portfolio. You can see the whole development history from when I started to the final optimized version, which keeps everything organized and traceable.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>Figma Collaboration for Brand Guide</a></h4>
-                <p className="apple-evidence-text">Worked collaboratively in Figma on the brand guide with teammates. Figma's version control enabled real-time collaboration and maintained a complete project history, allowing me to reference exact design values when building the website.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>Real-time Figma Collaboration</a></h4>
+                <p className="apple-evidence-text">I worked with my team in Figma on the brand guide where we could see each other's cursors, leave comments, and watch changes happen in real time. Figma tracks everything like Git does for code, so we could try things out and go back to earlier versions if we needed to.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#user-testing" onClick={(e) => handleEvidenceClick(e, 'user-testing')}>Brand Guide Implementation</a></h4>
-                <p className="apple-evidence-text">Worked with the brand guide created by teammates to keep visual consistency in colors, fonts, and visual elements throughout the website design.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#team-collaboration" onClick={(e) => handleEvidenceClick(e, 'team-collaboration')}>Team Charter & Communication Systems</a></h4>
+                <p className="apple-evidence-text">We created a team charter to set clear rules and expectations. We used Flowspace for managing tasks and WhatsApp for daily updates, which kept everything organized and made sure we were all on the same page.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#team-collaboration" onClick={(e) => handleEvidenceClick(e, 'team-collaboration')}>Team Communication</a></h4>
-                <p className="apple-evidence-text">Used WhatsApp for daily team communication and Flowspace for task management and sharing project information.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Short Movie Project Brief</a></h4>
+                <p className="apple-evidence-text">Lars and I wrote up a full project brief documenting our vision, concept, and approach for the short film. It helped us communicate our ideas clearly and kept us aligned on what we were trying to make.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#overview" onClick={(e) => handleEvidenceClick(e, 'overview')}>Design Documentation</a></h4>
-                <p className="apple-evidence-text">Created clear documentation of the design process from research to final implementation.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#3d-modeling" onClick={(e) => handleEvidenceClick(e, '3d-modeling')}>Photogrammetry Workflow Documentation</a></h4>
+                <p className="apple-evidence-text">I created a complete workflow tutorial showing every step of the RealityScan to Unreal Engine process. The documentation makes it easy for anyone on the team to follow the same workflow and get the same results.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-development" onClick={(e) => handleEvidenceClick(e, 'portfolio-development')}>Portfolio GitHub Version Control</a></h4>
-                <p className="apple-evidence-text">Used GitHub for both the original and React versions of the portfolio, maintaining clear commit history and documentation of technical decisions.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-design" onClick={(e) => handleEvidenceClick(e, 'portfolio-design')}>Portfolio Design Documentation</a></h4>
-                <p className="apple-evidence-text">Documented the complete design journey from research and inspiration to final implementation, showing clear reasoning for design choices.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-3d-intro" onClick={(e) => handleEvidenceClick(e, 'portfolio-3d-intro')}>3D Model Optimization Documentation</a></h4>
+                <p className="apple-evidence-text">I documented how I optimized the 3D model from 95MB down to 16.79MB using gltf-transform. I explained the technical decisions about compression and texture sizing, and the trade-offs between file size and visual quality.</p>
               </div>
             </div>
           </div>
@@ -337,40 +318,31 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Evidence</h3>
             <div className="apple-evidence-list">
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#design-iterations" onClick={(e) => handleEvidenceClick(e, 'design-iterations')}>Multiple Design Iterations</a></h4>
-                <p className="apple-evidence-text">Created several different design concepts in Figma for the Ducks on Fire website, each trying different approaches to show the agency's services.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#design-iterations" onClick={(e) => handleEvidenceClick(e, 'design-iterations')}>Agency Website Design Iterations</a></h4>
+                <p className="apple-evidence-text">I created multiple design versions in Figma, shifting from a modern look (Iteration 1) to a vintage aesthetic (Iterations 2-4) based on our team's brand guide. Each version responded to feedback with clear reasons for the changes - like matching the brand identity better, improving navigation, and balancing vintage style with modern usability.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#user-testing" onClick={(e) => handleEvidenceClick(e, 'user-testing')}>Feedback Integration</a></h4>
-                <p className="apple-evidence-text">Collected feedback from teammates and classmates on design iterations and used this to make improvements in the next version.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#user-testing" onClick={(e) => handleEvidenceClick(e, 'user-testing')}>User Testing with Documented Changes</a></h4>
+                <p className="apple-evidence-text">I tested my designs with teammates and classmates throughout the process. When someone said "I can't tell what this agency does," I added a clear hero section. I documented all the feedback and the changes I made, which helped me stay systematic about incorporating what people told me.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#research" onClick={(e) => handleEvidenceClick(e, 'research')}>Research to Final Design Process</a></h4>
-                <p className="apple-evidence-text">Documented the complete process from initial agency research, through inspiration gathering, to multiple design iterations, to the final design.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#3d-modeling" onClick={(e) => handleEvidenceClick(e, '3d-modeling')}>Video Tutorial Iterations</a></h4>
+                <p className="apple-evidence-text">I made a first version of the workflow video in Premiere Pro, got feedback from my team about pacing and clarity, then made a second version with better annotations, smoother transitions, and actual video footage instead of just static images.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#design-iterations" onClick={(e) => handleEvidenceClick(e, 'design-iterations')}>Iterative Improvement</a></h4>
-                <p className="apple-evidence-text">Each design version built on insights from the previous one, showing clear connections between iterations and reasons for changes.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Storyboard Iterations Based on Technical Constraints</a></h4>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#poster" onClick={(e) => handleEvidenceClick(e, 'poster')}>Poster Design Iterations</a></h4>
-                <p className="apple-evidence-text">Created an initial poster design, gathered feedback from team and teachers, and refined it into a final version with improved visual hierarchy and brand consistency.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#3d-modeling" onClick={(e) => handleEvidenceClick(e, '3d-modeling')}>Comparing Photogrammetry Solutions</a></h4>
+                <p className="apple-evidence-text">I tried PhotoModeler and got disappointing results, so I compared it with my team's RealityScan approach. I documented the quality differences and what I learned from testing both solutions.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Short Movie Storyboarding Process</a></h4>
-                <p className="apple-evidence-text">Developed the short movie through iterative stages: whiteboard sketches, refined comic-style storyboard using Nano Banana Pro, showing clear progression and connections between each iteration of the creative process.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-3d-intro" onClick={(e) => handleEvidenceClick(e, 'portfolio-3d-intro')}>3D Model Optimization Iterations</a></h4>
+                <p className="apple-evidence-text">I went through multiple optimization attempts: the original 95MB model caused lag, my first compression to 48.58MB broke the UV coordinates, and my final optimization to 16.79MB kept the quality intact. Each version fixed specific problems I found through testing.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#3d-modeling" onClick={(e) => handleEvidenceClick(e, '3d-modeling')}>Testing Different Solutions</a></h4>
-                <p className="apple-evidence-text">Experimented with PhotoModeler for 3D modeling, evaluated the disappointing results, and learned from the team's comparison with other software like RealityScan to understand which tools work better for photogrammetry.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-design" onClick={(e) => handleEvidenceClick(e, 'portfolio-design')}>Portfolio Design Iterations</a></h4>
-                <p className="apple-evidence-text">Created multiple Figma iterations for the portfolio, balancing playful and professional elements, with each version building on feedback about being too game-like or too formal.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-feedback" onClick={(e) => handleEvidenceClick(e, 'portfolio-feedback')}>Portfolio Feedback & Refinement</a></h4>
-                <p className="apple-evidence-text">Showed early versions to friends and classmates, received feedback about professionalism balance, and adjusted the design to find the right sweet spot.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-survey-results" onClick={(e) => handleEvidenceClick(e, 'portfolio-survey-results')}>Data-Driven Design Validation</a></h4>
+                <p className="apple-evidence-text">I ran an A/B testing survey to see if the 3D intro was actually a good idea. I got feedback from 6 people, and everyone preferred the portfolio with the 3D intro, which validated my decision with actual user data instead of just my opinion.</p>
               </div>
             </div>
           </div>
@@ -409,32 +381,28 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Evidence</h3>
             <div className="apple-evidence-list">
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#overview" onClick={(e) => handleEvidenceClick(e, 'overview')}>Structured Project Approach</a></h4>
-                <p className="apple-evidence-text">Followed a clear process for the Ducks on Fire project: research → inspiration gathering → design iterations → user testing → final implementation.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#research" onClick={(e) => handleEvidenceClick(e, 'research')}>Applied Research Methodology</a></h4>
+                <p className="apple-evidence-text">I used the DOT framework to research agency websites - specifically Library Research and Best, Good & Bad Analysis. I looked at 6 different agency websites and categorized what worked, what was okay, and what didn't, which gave me solid evidence to base my design decisions on.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#team-collaboration" onClick={(e) => handleEvidenceClick(e, 'team-collaboration')}>Team Charter Creation</a></h4>
-                <p className="apple-evidence-text">Created a team charter at the start of the project that set clear rules and expectations for how the team would work together.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#team-collaboration" onClick={(e) => handleEvidenceClick(e, 'team-collaboration')}>Professional Team Setup</a></h4>
+                <p className="apple-evidence-text">We created a team charter with clear roles and expectations. We used Flowspace for managing tasks and WhatsApp for daily communication, which kept us organized and made sure everyone stayed involved throughout the project.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Short Movie Project Brief</a></h4>
-                <p className="apple-evidence-text">Created a comprehensive project brief with Lars for the short movie that laid out our vision, concept, inspirations, and planned approach. This professional documentation helped us stay focused and aligned throughout production.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#short-movie" onClick={(e) => handleEvidenceClick(e, 'short-movie')}>Comprehensive Project Brief</a></h4>
+                <p className="apple-evidence-text">Lars and I created a detailed project brief documenting our vision, concept, research (like Apple Vision Pro ads and that Black Mirror episode), and technical approach. It helped us set clear goals and kept everyone on the same page throughout production.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#research" onClick={(e) => handleEvidenceClick(e, 'research')}>Applied Research</a></h4>
-                <p className="apple-evidence-text">Conducted research into creative agencies to understand industry standards and inform design decisions.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>Collaborative Design with Version Control</a></h4>
+                <p className="apple-evidence-text">I worked with my team in Figma on the brand guide where everything's tracked like Git does for code. We could experiment with designs, go back to previous versions if needed, and everyone had access to the complete project history.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#team-collaboration" onClick={(e) => handleEvidenceClick(e, 'team-collaboration')}>Team Collaboration</a></h4>
-                <p className="apple-evidence-text">Worked with teammates who created the brand guide and incorporated their work into the website design.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-ab-testing" onClick={(e) => handleEvidenceClick(e, 'portfolio-ab-testing')}>Professional User Research Approach</a></h4>
+                <p className="apple-evidence-text">I ran an A/B test with a structured survey (12 questions, 6 participants) to validate whether the 3D intro was worth keeping. I set clear research goals, gathered data, and used it to make an evidence-based decision instead of just going with my gut.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-overview" onClick={(e) => handleEvidenceClick(e, 'portfolio-overview')}>Portfolio Project Methodology</a></h4>
-                <p className="apple-evidence-text">Followed a structured approach for the portfolio project: research other portfolios → identify unique angle → design iterations → development → optimization for different devices.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-feedback" onClick={(e) => handleEvidenceClick(e, 'portfolio-feedback')}>Responsive Design Considerations</a></h4>
-                <p className="apple-evidence-text">Ensured the portfolio works on different devices by simplifying animations for mobile and creating responsive layouts, considering accessibility and user experience across platforms.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-3d-intro" onClick={(e) => handleEvidenceClick(e, 'portfolio-3d-intro')}>Cross-Browser Performance Testing</a></h4>
+                <p className="apple-evidence-text">I found out the 3D intro performed differently across browsers - Chrome and Opera had more lag than Brave, Edge, and Safari. I dug into why this happened and learned about WebGL and how different browsers handle GPU resources.</p>
               </div>
             </div>
           </div>
@@ -479,36 +447,28 @@ const ReadingGuide = ({ setIsTransitioning, setClickPosition }) => {
             <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Evidence</h3>
             <div className="apple-evidence-list">
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#overview" onClick={(e) => handleEvidenceClick(e, 'overview')}>Taking Initiative</a></h4>
-                <p className="apple-evidence-text">Took responsibility for the website research, design, and development part of the Ducks on Fire project while teammates focused on branding.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-overview" onClick={(e) => handleEvidenceClick(e, 'portfolio-overview')}>Portfolio as Authentic Self-Expression</a></h4>
+                <p className="apple-evidence-text">I created a Wii-themed portfolio that actually reflects my personality and what I care about. I went with an external website to show both my design and coding skills, because I believe portfolios should be memorable and fun while still being professional.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>Self-Directed Learning</a></h4>
-                <p className="apple-evidence-text">Learned new techniques and approaches for web development and design implementation during the project.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#user-testing" onClick={(e) => handleEvidenceClick(e, 'user-testing')}>Seeking Feedback</a></h4>
-                <p className="apple-evidence-text">Asked teammates, classmates, and friends for feedback on design iterations and used their input to improve the work.</p>
-              </div>
-              <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#development" onClick={(e) => handleEvidenceClick(e, 'development')}>Problem Solving</a></h4>
-                <p className="apple-evidence-text">Worked through technical challenges during development and found solutions independently.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-3d-intro" onClick={(e) => handleEvidenceClick(e, 'portfolio-3d-intro')}>Proactive Self-Directed Learning</a></h4>
+                <p className="apple-evidence-text">I taught myself Three.js and React Three Fiber from scratch to build the 3D intro. I had to figure out WebGL rendering, 3D scenes, camera controls, lighting, UV coordinates - all of it on my own, which pushed me way out of my comfort zone.</p>
               </div>
               <div className="apple-evidence-item">
                 <h4 className="apple-evidence-title"><a href="/projects-apple#3d-modeling" onClick={(e) => handleEvidenceClick(e, '3d-modeling')}>Learning from Failures</a></h4>
-                <p className="apple-evidence-text">Experimented with PhotoModeler for 3D modeling, recognized when the results were disappointing, and learned from comparing it with teammates' more successful approaches using different software.</p>
+                <p className="apple-evidence-text">I tried PhotoModeler and it gave disappointing results. Instead of getting stuck, I compared it with what my team did with RealityScan and learned from why theirs worked better. It taught me that picking the wrong tool happens, but you can learn from it.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-overview" onClick={(e) => handleEvidenceClick(e, 'portfolio-overview')}>Portfolio as Personal Expression</a></h4>
-                <p className="apple-evidence-text">Created a unique Wii-themed portfolio that reflects my personality and interests, choosing an external website format to showcase both design and technical skills.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-3d-intro" onClick={(e) => handleEvidenceClick(e, 'portfolio-3d-intro')}>Persistent Technical Problem Solving</a></h4>
+                <p className="apple-evidence-text">I went through multiple attempts to optimize the 3D model: 95MB caused lag, my first try at 48.58MB broke the UV coordinates, and my final version at 16.79MB finally kept the quality. I had to learn gltf-transform and debug a bunch of issues, but I stuck with it until it worked.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-feedback" onClick={(e) => handleEvidenceClick(e, 'portfolio-feedback')}>Critical Self-Reflection</a></h4>
-                <p className="apple-evidence-text">Learned to balance creativity with usability, being critical of my own work and cutting features that didn't serve the end goal even after spending hours on them.</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-ab-testing" onClick={(e) => handleEvidenceClick(e, 'portfolio-ab-testing')}>Validating Bold Choices with Research</a></h4>
+                <p className="apple-evidence-text">I knew the 3D intro was a bold choice and might not work for everyone. Instead of just assuming it was good because I liked it, I ran an A/B test to validate it with actual data. It showed me that personal preferences need to be backed up with user research.</p>
               </div>
               <div className="apple-evidence-item">
-                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-development" onClick={(e) => handleEvidenceClick(e, 'portfolio-development')}>Technical Problem Solving</a></h4>
-                <p className="apple-evidence-text">Worked through complex challenges like page transitions, dot grid physics, and performance optimization, finding solutions through trial and error and learning new technologies (React, GSAP).</p>
+                <h4 className="apple-evidence-title"><a href="/projects-apple#portfolio-feedback" onClick={(e) => handleEvidenceClick(e, 'portfolio-feedback')}>Critical Self-Reflection & Priority Management</a></h4>
+                <p className="apple-evidence-text">I've learned to be critical of my own work and cut features that don't actually help, even after spending hours on them. It's taught me that perfectionism can get in the way of finishing things. I know time management is a weakness I'm working on.</p>
               </div>
             </div>
           </div>
