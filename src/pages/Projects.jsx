@@ -353,9 +353,13 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
               <li>GitHub</li>
               <li>Claude</li>
               <li>React</li>
+              <li>Three.js / React Three Fiber</li>
+              <li>Blender (3D modeling)</li>
+              <li>gltf-transform (model optimization)</li>
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
+              <li>Google Forms (user research)</li>
             </ul>
           </div>
         </div>
@@ -415,6 +419,82 @@ const Projects = ({ setIsTransitioning, setClickPosition }) => {
           <h3>Customization</h3>
           <p>
             While I took heavy inspiration from the Wii, I didn't want to just copy it. I added modern design elements, updated the color scheme to fit my personal brand, and included interactive features that wouldn't have been possible on the actual Wii.
+          </p>
+        </div>
+      </ParallaxSection>
+
+      {/* 3D Intro Experience */}
+      <ParallaxSection sectionClassName="project-section" id="portfolio-3d-intro">
+        <div className="stack-card-content">
+          <h2 className="section-title">3D INTRO EXPERIENCE</h2>
+          <h3>Why I Added the 3D Room</h3>
+          <p>
+            After working with 3D models and photogrammetry in the Ducks on Fire project, I wanted to challenge myself by implementing 3D technology directly into my portfolio website. The experience with 3D modeling made me curious about how I could use these skills in a web environment.
+          </p>
+          <p>
+            I decided to create an interactive 3D living room intro with a TV that users can click to enter the portfolio. This wasn't just about making something cool - it was about learning a new technology stack and pushing myself out of my comfort zone.
+          </p>
+          <h3>Learning Three.js & React Three Fiber</h3>
+          <p>
+            This was my first time working with <strong>Three.js</strong>, a JavaScript library for creating 3D graphics in the browser, and <strong>React Three Fiber</strong>, which makes Three.js work smoothly with React. The learning curve was steep, but it was exactly the challenge I was looking for.
+          </p>
+          <p>
+            I had to learn concepts like WebGL rendering, 3D scene management, camera controls, lighting systems, texture mapping, and mesh manipulation. Getting the homepage screenshot to display correctly on the TV screen in the 3D room took multiple attempts and debugging sessions to understand UV coordinates and texture orientation.
+          </p>
+          <h3>Technical Challenges - Model Optimization</h3>
+          <p>
+            The original 3D room model was 95MB, which caused significant lag for users on different devices and browsers. I learned about 3D model optimization techniques and used <strong>gltf-transform</strong> to compress the model down to 16.79MB (82% smaller) while preserving all the important details like UV coordinates for textures.
+          </p>
+          <p>
+            This involved experimenting with different compression methods, testing Draco compression, resizing textures, and understanding the trade-offs between file size and visual quality. I had to debug issues where aggressive optimization broke the TV screen texture by corrupting UV coordinates.
+          </p>
+          <h3>Performance Optimization & Browser Testing</h3>
+          <p>
+            Through user feedback, I discovered that the 3D intro performed differently across browsers. Chrome and Opera showed more lag compared to Brave, Edge, and Safari due to differences in how browsers handle WebGL and GPU resources. This taught me the importance of cross-browser testing and understanding browser rendering engines.
+          </p>
+        </div>
+      </ParallaxSection>
+
+      {/* A/B Testing & User Research */}
+      <ParallaxSection sectionClassName="project-section" id="portfolio-ab-testing">
+        <div className="stack-card-content">
+          <h2 className="section-title">A/B TESTING & USER RESEARCH</h2>
+          <h3>Why I Conducted User Research</h3>
+          <p>
+            Adding a 3D intro is a bold design choice - it could either make the portfolio memorable and engaging, or it could slow down the experience and frustrate users. I needed to validate this decision with real user feedback rather than just assuming it was a good idea.
+          </p>
+          <p>
+            For my learning outcomes, it was important to demonstrate that I can make <strong>data-driven design decisions</strong>. User research and A/B testing are industry-standard practices for validating design choices, so conducting this test shows I understand how to properly evaluate UX decisions.
+          </p>
+          <h3>Research Methodology</h3>
+          <p>
+            I created a comprehensive Google Forms survey with 12 questions covering:
+          </p>
+          <ul>
+            <li><strong>First Impressions:</strong> Initial reactions, load times, and performance</li>
+            <li><strong>Design & Aesthetic:</strong> Whether it fits the portfolio vibe and visual quality</li>
+            <li><strong>User Experience:</strong> Clarity of interactions and engagement level</li>
+            <li><strong>Overall Preference:</strong> Whether users prefer WITH or WITHOUT the 3D intro</li>
+          </ul>
+          <h3>Learning Outcomes</h3>
+          <p>
+            This A/B testing process taught me several important skills:
+          </p>
+          <p>
+            <strong>User Research Methods:</strong> I learned how to design effective survey questions that gather both quantitative data (ratings, multiple choice) and qualitative feedback (open responses). The survey structure helps identify specific issues rather than just general opinions.
+          </p>
+          <p>
+            <strong>Iterative Design & Testing:</strong> Just like with the Ducks on Fire website, this shows my commitment to testing and iterating based on real user feedback. Good design isn't about what I think looks cool - it's about what actually works for users.
+          </p>
+          <p>
+            <strong>Professional Development Practices:</strong> Conducting user research demonstrates that I approach web development professionally. I'm not just building things for myself - I'm thinking about the end user experience and backing up my decisions with data.
+          </p>
+          <p>
+            <strong>Risk Assessment:</strong> By testing the 3D intro, I'm acknowledging that bold design choices need validation. This shows I understand that innovation needs to be balanced with usability and user preference.
+          </p>
+          <h3>Results & Decision Making</h3>
+          <p>
+            The feedback from this A/B test will directly influence whether I keep the 3D intro, modify it, or create an alternative landing page. This demonstrates that I'm willing to adapt my work based on user needs rather than being attached to my original ideas.
           </p>
         </div>
       </ParallaxSection>
