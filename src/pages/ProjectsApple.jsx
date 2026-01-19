@@ -867,7 +867,7 @@ const ProjectsApple = ({ setIsTransitioning, setClickPosition }) => {
             After working with 3D models and photogrammetry in the Ducks on Fire project, I wanted to challenge myself by implementing 3D technology directly into my portfolio website. The experience with 3D modeling made me curious about how I could use these skills in a web environment.
           </p>
           <p className="apple-section-text">
-            I decided to create an interactive 3D living room intro with a TV that users can click to enter the portfolio. This wasn't just about making something cool - it was about learning a new technology stack and pushing myself out of my comfort zone.
+            I decided to use an interactive 3D living room intro with a TV that users can click to enter the portfolio. This wasn't just about making something cool - it was about learning a new technology stack and pushing myself out of my comfort zone.
           </p>
           <h3 className="apple-subsection-title" style={{ marginTop: '120px' }}>Learning Three.js & React Three Fiber</h3>
           <p className="apple-section-text">
